@@ -40,3 +40,4 @@ while products:
             # You need to break loop , flag product and update
         else:
             pass  # Return product , at the end of the queue
+        # Test input number 1.
