@@ -8,15 +8,15 @@ def get_sec(time_str):
     return int(h) * 3600 + int(m) * 60 + int(s)
 
 
-robots = {}
+available_robots = deque()
+busy_robots = deque()
 
 robots_info = input().split(';')
 for r in robots_info:
     robot, time_processing = r.split('-')
     time_processing = int(time_processing)
-    is_availabe = True
-    available_at = ''
-    robots[robot] = [time_processing, is_availabe, available_at]
+    available_robots.append([robot, time_processing, True, ''])
+
 
 start_time = input()
 total_seconds = get_sec(start_time)
@@ -32,26 +32,17 @@ while True:
 while products:
     total_seconds += 1
     product = products.popleft()
-    is_product_taken = False
 
-    for robot, info in robots.items():
-        if info[2]:
-            if total_seconds == get_sec(info[2]):
-                info[1] = True
-        time_processing, is_availabe, available_at = info
-        if is_availabe:
-            is_product_taken = True
-            taken_product_at = strftime('%H:%M:%S', gmtime(total_seconds))
-            print(f'{robot} - {product} [{taken_product_at}]')
+    if available_robots:
+        available_robot = available_robots.popleft()
 
-            is_availabe = False
-            available_at = strftime('%H:%M:%S', gmtime(
-                total_seconds + time_processing))
-
-            info[1] = is_availabe
-            info[2] = available_at
-
-            if is_product_taken:
-                break
-    if not is_product_taken:
+        print(available_robot)
+        available_robot[2] = False
+        available_robot[3] = strftime(
+            '%H:%M:%S', gmtime(total_seconds + available_robot[1]))
+        busy_robots.append(available_robot)
+    else:
         products.append(product)
+        for busy_robot in busy_robots:
+        if get_sec(busy_robot[3]) == total_seconds:
+            busy_robot[2] = False
