@@ -32,17 +32,14 @@ while True:
 while products:
     total_seconds += 1
     product = products.popleft()
-
     if available_robots:
         available_robot = available_robots.popleft()
-
-        print(available_robot)
         available_robot[2] = False
+        print(
+            f"{available_robot[0]} - {product} [{strftime('%H:%M:%S', gmtime(total_seconds))}]")
+
         available_robot[3] = strftime(
             '%H:%M:%S', gmtime(total_seconds + available_robot[1]))
         busy_robots.append(available_robot)
     else:
-        products.append(product)
-        for busy_robot in busy_robots:
-        if get_sec(busy_robot[3]) == total_seconds:
-            busy_robot[2] = False
+       # What if there are no available robots ?
