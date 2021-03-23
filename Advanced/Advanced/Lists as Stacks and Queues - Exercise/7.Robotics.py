@@ -31,13 +31,4 @@ while True:
 
 while products:
     total_seconds += 1
-    for robot, info in robots.items():
-        if info[1]:
-            print(
-                f"{robot} - {products.popleft()} [{strftime('%H:%M:%S', gmtime(total_seconds))}]")
-            info[2] = strftime('%H:%M:%S', gmtime(total_seconds + info[0]))
-            info[1] = False
-            # You need to break loop , flag product and update
-        else:
-            pass  # Return product , at the end of the queue
-        # Test input number 1.
+    
