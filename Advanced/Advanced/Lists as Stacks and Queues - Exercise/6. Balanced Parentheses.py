@@ -1,8 +1,8 @@
 parentheses = input()
 open_parentheses = []  # stack
 
-
 for parenthesis in parentheses:
+    
     if not len(parentheses) % 2 == 0:
         print('NO')
         break
