@@ -31,4 +31,27 @@ while True:
 
 while products:
     total_seconds += 1
-    
+    product = products.popleft()
+    is_product_taken = False
+
+    for robot, info in robots.items():
+        if info[2]:
+            if total_seconds == get_sec(info[2]):
+                info[1] = True
+        time_processing, is_availabe, available_at = info
+        if is_availabe:
+            is_product_taken = True
+            taken_product_at = strftime('%H:%M:%S', gmtime(total_seconds))
+            print(f'{robot} - {product} [{taken_product_at}]')
+
+            is_availabe = False
+            available_at = strftime('%H:%M:%S', gmtime(
+                total_seconds + time_processing))
+
+            info[1] = is_availabe
+            info[2] = available_at
+
+            if is_product_taken:
+                break
+    if not is_product_taken:
+        products.append(product)
