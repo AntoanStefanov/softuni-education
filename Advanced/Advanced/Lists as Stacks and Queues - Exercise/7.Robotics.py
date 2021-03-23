@@ -37,6 +37,6 @@ while products:
                 f"{robot} - {products.popleft()} [{strftime('%H:%M:%S', gmtime(total_seconds))}]")
             info[2] = strftime('%H:%M:%S', gmtime(total_seconds + info[0]))
             info[1] = False
-            # TODO
+            # You need to break loop , flag product and update
         else:
-            pass  # TODO
+            pass  # Return product , at the end of the queue
