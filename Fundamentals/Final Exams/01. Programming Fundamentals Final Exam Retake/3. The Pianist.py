@@ -4,7 +4,7 @@ piece_composer_dict = {}
 piece_key_dict = {}
 for _ in range(number_of_pieces):
     piece, composer, key = input().split('|')
-    piece_composer_dict[piece] = composer
+    piece_composer_dict[piece] = composer #### Mosh way
     piece_key_dict[piece] = key
 
 
