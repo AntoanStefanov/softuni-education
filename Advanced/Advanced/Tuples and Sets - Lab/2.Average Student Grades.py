@@ -2,6 +2,7 @@ from collections import defaultdict
 number_of_students = int(input())
 
 student_records = defaultdict(list)
+# if there is not such a key, defaultdict creates it for us with a value of empty list.
 
 for _ in range(number_of_students):
     name, grade = input().split()
