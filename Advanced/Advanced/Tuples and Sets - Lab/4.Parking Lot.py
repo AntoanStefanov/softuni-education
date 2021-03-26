@@ -7,12 +7,15 @@ for _ in range(number_of_cars):
     # Dictionary
     directions = {
         'IN': parking_lot.add,
-        'OUT': parking_lot.remove,
+        # remove method will return keyerror if the car does not exist in the set.
+        # discard method will ignore if we remove a car that doesn't exist in the set
+        # yet judge gives 100/100 with remove.
+        'OUT': parking_lot.discard,
 
     }
     directions[direction](car_number)
-    ### OR ### 
-     
+    ### OR ###
+
     # if direction == 'IN':
     #     parking_lot.add(car_number)
     # else:
