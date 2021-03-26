@@ -11,7 +11,7 @@ for _ in range(number_of_cars):
 
     }
     directions[direction](car_number)
-     ### OR ### 
+    ### OR ### 
      
     # if direction == 'IN':
     #     parking_lot.add(car_number)
