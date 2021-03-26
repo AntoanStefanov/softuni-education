@@ -1,6 +1,7 @@
 from collections import defaultdict
 
 
+# or [float(n) for n in input.split()] and del line 9 and 23
 numbers = input().split()
 # If the key doesn't exist in the dict, factory will construct the key and value 0'
 occurrences = defaultdict(int)  # default factory  int , which will return 0 !
