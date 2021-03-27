@@ -11,5 +11,5 @@ for _ in range(numbers_of_second_set):
     second_set.add(num)
 
 unique_elements_in_both_sets = first_set & second_set
-for num in unique_elements_in_both_sets:
-    print(num)
+
+[print(num) for num in unique_elements_in_both_sets]
