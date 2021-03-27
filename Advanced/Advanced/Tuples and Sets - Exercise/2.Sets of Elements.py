@@ -1,0 +1,15 @@
+first_set = set()
+second_set = set()
+
+numbers_of_first_set, numbers_of_second_set = [int(n) for n in input().split()]
+
+for _ in range(numbers_of_first_set):
+    num = int(input())
+    first_set.add(num)
+for _ in range(numbers_of_second_set):
+    num = int(input())
+    second_set.add(num)
+
+unique_elements_in_both_sets = first_set & second_set
+for num in unique_elements_in_both_sets:
+    print(num)
