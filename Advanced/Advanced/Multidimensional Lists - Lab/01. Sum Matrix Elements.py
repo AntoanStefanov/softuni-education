@@ -20,7 +20,10 @@ rows, columns = [int(x) for x in input().split(', ')]
 matrix = [[int(x) for x in input().split(', ')] for r in range(rows)]
 # Подаване като позиционен аргумент всеки един от редовете в матрицата *
 # chain([1, 2, 3], [1, 2, 3]) -> [1, 2, 3, 1, 2, 3] Връзва във верига и връща chain_object
-# След което може да се сумират sum([1, 2, 3, 1, 2, 3])
+# След което може да се сумират sum([1, 2, 3, 1, 2, 3])~
+# List with all elements in the matrix
+# list_with_all_rows = list(itertools.chain(*matrix))
+# print(list_with_all_rows)
 matrix_sum = sum(itertools.chain(*matrix))
 print(matrix_sum)
 print(matrix)
