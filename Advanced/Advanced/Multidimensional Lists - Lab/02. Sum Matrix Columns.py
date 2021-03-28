@@ -52,5 +52,5 @@ for r in range(rows):
 
 transpositioned_matrix = zip(*matrix)
 
-for tuple_of_columns in transpositioned_matrix:
-    print(sum(tuple_of_columns))
+for tuple_of_elements_in_a_column in transpositioned_matrix:
+    print(sum(tuple_of_elements_in_a_column))
