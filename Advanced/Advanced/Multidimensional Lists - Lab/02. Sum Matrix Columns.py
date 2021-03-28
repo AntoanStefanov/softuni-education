@@ -27,6 +27,8 @@
 
 # transposition of a matrix (90 degrees)
 # zip() returns a transpositioned matrix
+# zip returns the i-th element of every iterable in a tuple.
+# list(zip([1, 2], [3, 4], [5, 6])) returns [(1, 3, 5), (2, 4, 6)]
 # matrix = [
 #     [1, 2, 3],
 #     [4, 5, 6],
