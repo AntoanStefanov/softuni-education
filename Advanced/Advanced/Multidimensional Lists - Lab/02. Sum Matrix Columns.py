@@ -26,7 +26,7 @@
 # ............
 
 # transposition of a matrix (90 degrees)
-
+# zip() returns a transpositioned matrix
 # matrix = [
 #     [1, 2, 3],
 #     [4, 5, 6],
