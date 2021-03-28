@@ -9,6 +9,7 @@ total = 0
 
 for row in range(square_matrix_size):
     column = row
-    total += matrix[row][column]
+    value = matrix[row][column]
+    total += value
 
 print(total)
