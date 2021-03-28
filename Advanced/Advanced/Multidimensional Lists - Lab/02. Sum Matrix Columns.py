@@ -8,8 +8,8 @@ for r in range(rows):
 
 for col in range(cols):
     column_sum = 0
-    for r in range(rows):
-        column_sum += matrix[r][col]
+    for row in range(rows):
+        column_sum += matrix[row][col]
     print(column_sum)
 
 
