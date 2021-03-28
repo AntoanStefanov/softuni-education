@@ -33,7 +33,8 @@
 #     [7, 8, 9],
 # ]
 
-#print([el for el in zip(*matrix)])
+# print([el for el in zip(*matrix)])
+# print(list(zip(*matrix)))
 # transpositioned matrix = [
 #    [1, 4, 7],
 #    [2, 5, 8],
