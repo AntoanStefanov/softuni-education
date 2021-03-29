@@ -7,7 +7,7 @@ for r in range(rows):
     row = [int(x) for x in input().split()]
     matrix.append(row)
 
-# It gave 80/100 if you assign 0 as submatrix_sum !!! So it means there were negative nums
+# It gave 80/100 if you assign 0 as submatrix_sum !! So it means there were negative nums
 submatrix_sum = None
 submatrix = []
 
