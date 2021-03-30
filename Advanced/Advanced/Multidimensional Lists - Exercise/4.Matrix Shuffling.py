@@ -5,8 +5,6 @@ matrix = []
 for _ in range(rows):
     matrix.append([int(x) for x in input().split()])
 
-print(matrix)
-
 
 while True:
     data = input()
@@ -19,9 +17,8 @@ while True:
     command = data[0]
 
     if command == 'swap':
-        if len(data) == 5:  # swap index1 index2 index3 index4
-            pass
-            # TODO check if indeces are valid
+        if len(data) == 5: 
+           
             first_row_index, first_col_index, second_row_index, second_col_index = data[1:]
 
             first_row_index = int(first_row_index)
@@ -31,11 +28,12 @@ while True:
 
             if 0 <= first_row_index < rows and 0 <= second_row_index < rows:
                 if 0 <= first_col_index < cols and 0 <= second_col_index < cols:
-                    # TODOpass
+
                     matrix[first_row_index][first_col_index], matrix[second_row_index][second_col_index] = matrix[
                         second_row_index][second_col_index], matrix[first_row_index][first_col_index]
 
-                    print()
+                    for r in matrix:
+                        print(*r)
                 else:
                     print('Invalid input!')
             else:
