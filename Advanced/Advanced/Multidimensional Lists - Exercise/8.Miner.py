@@ -29,7 +29,7 @@ game_over = False
 for direction in commands:
 
     if direction == 'left':
-        if miner_column-1 >= 0:
+        if miner_column - 1 >= 0:
             miner_column -= 1
             if matrix[miner_row][miner_column] == 'c':
                 matrix[miner_row][miner_column] = '*'
