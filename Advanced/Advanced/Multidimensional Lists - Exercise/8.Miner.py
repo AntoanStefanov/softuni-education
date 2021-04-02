@@ -46,7 +46,7 @@ for direction in commands:
             elif matrix[miner_row][miner_column] == 'e':
                 game_over = True
     elif direction == 'right':
-        if miner_column+1 < columns:
+        if miner_column + 1 < columns:
             miner_column += 1
             if matrix[miner_row][miner_column] == 'c':
                 matrix[miner_row][miner_column] = '*'
