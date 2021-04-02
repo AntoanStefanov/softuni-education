@@ -64,7 +64,7 @@ for direction in commands:
                 game_over = True
 
     if game_over:
-        print(f"Game over! ({miner_row}, {miner_column})")
+        print(f'Game over! ({miner_row}, {miner_column})')
         break
     if collected_coals == all_coals:
         print(f"You collected all coals! ({miner_row}, {miner_column})")
