@@ -2,11 +2,16 @@ rows = int(input())
 columns = rows
 
 commands = input().split()
-matrix = []
 
-for row in range(rows):
-    matrix.append(input().split())
 
+def create_matrix(rows):
+    matrix = []
+    for row in range(rows):
+        matrix.append(input().split())
+    return matrix
+
+
+matrix = create_matrix(rows)
 
 miner_position = None
 all_coals = 0
