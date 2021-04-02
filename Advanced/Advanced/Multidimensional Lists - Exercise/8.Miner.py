@@ -55,7 +55,7 @@ for direction in commands:
                 game_over = True
 
     elif direction == 'down':
-        if miner_row+1 < rows:
+        if miner_row + 1 < rows:
             miner_row += 1
             if matrix[miner_row][miner_column] == 'c':
                 matrix[miner_row][miner_column] = '*'
