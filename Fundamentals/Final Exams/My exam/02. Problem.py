@@ -4,7 +4,7 @@ import re
 pattern = r'!(?P<command>[A-Z][a-z]{2,})!:\[(?P<code>[A-Za-z]{8,})\]'
 
 n = int(input())
-# SPACE ?
+
 
 for _ in range(n):
     to_check = input()
