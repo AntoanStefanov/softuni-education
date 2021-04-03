@@ -6,7 +6,7 @@ commands = input().split()
 
 def create_matrix(rows):
     matrix = []
-    for row in range(rows):
+    for _ in range(rows):
         matrix.append(input().split())
     return matrix
 
