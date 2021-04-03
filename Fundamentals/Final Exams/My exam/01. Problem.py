@@ -26,11 +26,11 @@ while True:
         print(string.endswith(str_to_check))
 
     elif command == 'Uppercase':
-        # Make all Uppercase and print it
+        
         string = string.upper()
         print(string)
     elif command == 'FindIndex':
-        char_to_find_index_to = data[1]  # the first one
+        char_to_find_index_to = data[1]
         print(string.index(char_to_find_index_to))
 
     elif command == 'Cut':
