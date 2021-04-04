@@ -1,4 +1,6 @@
-vowels = ['a', 'o', 'u', 'e', 'i']
+vowels = {'a', 'o', 'u', 'e', 'i'}
+# Using set beacuse the check for given element is faster than a list.
+# And that variable is only for checking.
 
 
 string = input()
