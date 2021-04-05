@@ -1,7 +1,5 @@
 rows = int(input())
 
-flatten_matrix = []
-
 matrix = [
     [int(x) for x in input().split(', ')]
     for row in range(rows)
