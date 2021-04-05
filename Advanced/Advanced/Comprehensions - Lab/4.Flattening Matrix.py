@@ -1,10 +1,11 @@
 rows = int(input())
 
 flatten_matrix = []
-matrix = []
-for row in range(rows):
-    elements = [int(x) for x in input().split(', ')]
-    matrix.append(elements)
+
+matrix = [
+    [int(x) for x in input().split(', ')]
+    for row in range(rows)
+]
 
 flatten_matrix = [
     el
