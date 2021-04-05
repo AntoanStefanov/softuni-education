@@ -8,8 +8,8 @@ matrix = [
 ]
 
 flatten_matrix = [
-    el
-    for sublist in matrix
-    for el in sublist
+    num
+    for row in matrix
+    for num in row
 ]
 print(flatten_matrix)
