@@ -80,19 +80,27 @@ for step in directions:
         if B_row - 1 >= 0:
             if matrix[B_row - 1][B_column] == 'P':
                 is_dead = True
-            matrix[B_row-1][B_column] = 'B'
+                matrix[B_row-1][B_column] = 'B'
+            if matrix[B_row - 1][B_column] == '.':
+                matrix[B_row-1][B_column] = 'B'
         if B_column + 1 < columns:
             if matrix[B_row][B_column + 1] == 'P':
                 is_dead = True
-            matrix[B_row][B_column + 1] = 'B'
+                matrix[B_row][B_column + 1] = 'B'
+            if matrix[B_row][B_column + 1] == '.':
+                matrix[B_row][B_column + 1] = 'B'
         if B_row + 1 < rows:
             if matrix[B_row + 1][B_column] == 'P':
                 is_dead = True
-            matrix[B_row + 1][B_column] = 'B'
+                matrix[B_row + 1][B_column] = 'B'
+            if matrix[B_row + 1][B_column] == '.':
+                matrix[B_row + 1][B_column] = 'B'
         if B_column - 1 >= 0:
             if matrix[B_row][B_column - 1] == 'P':
                 is_dead = True
-            matrix[B_row][B_column - 1] = 'B'
+                matrix[B_row][B_column - 1] = 'B'
+            if matrix[B_row][B_column - 1] == '.':
+                matrix[B_row][B_column - 1] = 'B'
     if has_won:
         break
     elif is_dead:
