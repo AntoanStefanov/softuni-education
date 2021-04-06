@@ -65,30 +65,6 @@ for step in directions:
         else:
             has_won = True
 
-    for row in range(rows):
-        for column in range(columns):
-
-            if matrix[row][column] == 'B':
-                if row - 1 >= 0:
-                    if matrix[row - 1][column] == 'P':
-                        is_dead = True
-                    matrix[row - 1][column] = 'B'
-
-                if column + 1 < columns:
-                    if matrix[row][column + 1] == 'P':
-                        is_dead = True
-                    matrix[row][column + 1] = 'B'
-
-                if row + 1 < rows:
-                    if matrix[row + 1][column] == 'P':
-                        is_dead = True
-                    matrix[row + 1][column] = 'B'
-
-                if column - 1 >= 0:
-                    if matrix[row][column - 1] == 'P':
-                        is_dead = True
-                    matrix[row][column - 1] = 'B'
-
     if has_won:
         print(f'won: {player_current_row} {player_current_column}')
         break
