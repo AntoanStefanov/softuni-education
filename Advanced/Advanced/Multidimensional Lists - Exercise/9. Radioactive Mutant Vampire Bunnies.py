@@ -18,7 +18,6 @@ for r in range(rows):
             player_current_row = r
             player_current_column = col
 
-# When he collapse in a B , does his prevoius position is replaced with . ?
 for step in directions:
 
     if step == 'U':
