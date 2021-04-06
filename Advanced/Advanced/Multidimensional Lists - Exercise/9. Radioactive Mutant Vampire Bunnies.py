@@ -33,7 +33,7 @@ for step in directions:
             matrix[player_current_row][player_current_column] = '.'
             has_won = True
     elif step == 'R':
-        if player_current_column + 1 < len(columns):
+        if player_current_column + 1 < columns:
             if matrix[player_current_row][player_current_column + 1] == 'B':
                 is_dead = True
             else:
@@ -44,7 +44,7 @@ for step in directions:
             matrix[player_current_row][player_current_column] = '.'
             has_won = True
     elif step == 'D':
-        if player_current_row + 1 < len(rows):
+        if player_current_row + 1 < rows:
             if matrix[player_current_row + 1][player_current_column] == 'B':
                 is_dead = True
             else:
