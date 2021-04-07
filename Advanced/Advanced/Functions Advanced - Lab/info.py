@@ -10,7 +10,7 @@ def y(a): return a + 10
 print(y(5))
 
 
-def fn(a): return lambda b: a + b # equals to fn = lambda a: lambda b: a + b
+def fn(a): return lambda b: a + b  # equals to fn = lambda a: lambda b: a + b
 
 
 # Function defining another function inside,
@@ -22,7 +22,7 @@ print(fn(1)(2))
 # Which evaluate the expression a + b
 
 # Closure structure means:
-# Defined funtion in outer function's body. 
+# Defined funtion in outer function's body.
 
 # Lambda can take multiple parameters
 # x = lambda a, b: a * b
@@ -31,3 +31,9 @@ print(fn(1)(2))
 # full_name = lambda first, last: f'I am {first} {last}'
 # result = full_name('Tony', 'Stefanov')
 # print(result) # I am Tony Stefanov
+
+
+filtered_nums = list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5, 6]))
+mapped_nums = list(map(lambda x: x % 2 == 0, [1, 2, 3, 4, 5, 6]))
+print(filtered_nums) 
+print(mapped_nums) # Тук се присвоява ретърна от lambdata
