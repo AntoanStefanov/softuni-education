@@ -8,7 +8,7 @@ for _ in range(rows):
 
 directions = input()
 
-is_dead = False
+has_died = False
 has_won = False
 player_current_row = None
 player_current_column = None
@@ -23,7 +23,7 @@ for step in directions:
     if step == 'U':
         if player_current_row - 1 >= 0:
             if matrix[player_current_row - 1][player_current_column] == 'B':
-                is_dead = True
+                has_died = True
             else:
                 matrix[player_current_row - 1][player_current_column] = 'P'
                 matrix[player_current_row][player_current_column] = '.'
@@ -34,7 +34,7 @@ for step in directions:
     elif step == 'R':
         if player_current_column + 1 < columns:
             if matrix[player_current_row][player_current_column + 1] == 'B':
-                is_dead = True
+                has_died = True
             else:
                 matrix[player_current_row][player_current_column + 1] = 'P'
                 matrix[player_current_row][player_current_column] = '.'
@@ -45,7 +45,7 @@ for step in directions:
     elif step == 'D':
         if player_current_row + 1 < rows:
             if matrix[player_current_row + 1][player_current_column] == 'B':
-                is_dead = True
+                has_died = True
             else:
                 matrix[player_current_row + 1][player_current_column] = 'P'
                 matrix[player_current_row][player_current_column] = '.'
@@ -56,7 +56,7 @@ for step in directions:
     elif step == 'L':
         if player_current_column - 1 >= 0:
             if matrix[player_current_row][player_current_column - 1] == 'B':
-                is_dead = True
+                has_died = True
             else:
                 matrix[player_current_row][player_current_column - 1] = 'P'
                 matrix[player_current_row][player_current_column] = '.'
@@ -78,36 +78,36 @@ for step in directions:
 
         if B_row - 1 >= 0:
             if matrix[B_row - 1][B_column] == 'P':
-                is_dead = True
+                has_died = True
                 matrix[B_row-1][B_column] = 'B'
             if matrix[B_row - 1][B_column] == '.':
                 matrix[B_row-1][B_column] = 'B'
         if B_column + 1 < columns:
             if matrix[B_row][B_column + 1] == 'P':
-                is_dead = True
+                has_died = True
                 matrix[B_row][B_column + 1] = 'B'
             if matrix[B_row][B_column + 1] == '.':
                 matrix[B_row][B_column + 1] = 'B'
         if B_row + 1 < rows:
             if matrix[B_row + 1][B_column] == 'P':
-                is_dead = True
+                has_died = True
                 matrix[B_row + 1][B_column] = 'B'
             if matrix[B_row + 1][B_column] == '.':
                 matrix[B_row + 1][B_column] = 'B'
         if B_column - 1 >= 0:
             if matrix[B_row][B_column - 1] == 'P':
-                is_dead = True
+                has_died = True
                 matrix[B_row][B_column - 1] = 'B'
             if matrix[B_row][B_column - 1] == '.':
                 matrix[B_row][B_column - 1] = 'B'
     if has_won:
         break
-    elif is_dead:
+    elif has_died:
         break
 for row in matrix:
     print(''.join(row))
 
 if has_won:
     print(f'won: {player_current_row} {player_current_column}')
-elif is_dead:
+elif has_died:
     print(f'dead: {player_current_row} {player_current_column}')
