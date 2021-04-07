@@ -25,3 +25,9 @@ print(fn(1)(2))
 # Defined funtion in outer function's body. 
 
 # Lambda can take multiple parameters
+# x = lambda a, b: a * b
+# print(x(3, 4))
+
+# full_name = lambda first, last: f'I am {first} {last}'
+# result = full_name('Tony', 'Stefanov')
+# print(result) # I am Tony Stefanov
