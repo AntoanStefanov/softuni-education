@@ -34,6 +34,6 @@ print(fn(1)(2))
 
 
 filtered_nums = list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5, 6]))
-mapped_nums = list(map(lambda x: x % 2 == 0, [1, 2, 3, 4, 5, 6]))
-print(filtered_nums) 
-print(mapped_nums) # Тук се присвоява ретърна от lambdata
+mapped_nums = list(map(lambda x: x % 2 == 0, [1, 2, 3, 4, 5, 6]))  # x: x**2
+print(filtered_nums)
+print(mapped_nums)  # Тук се присвоява ретърна от lambdata
