@@ -1,7 +1,13 @@
 countries = input().split(', ')
 capitals = input().split(', ')
 
-zipped_data = zip(countries, capitals)
+zipped_data = list(zip(countries, capitals))
 
 
-print(list(zipped_data))
+print(zipped_data)
+
+
+dict_comprehension = {country: capital for country,
+                      capital in zipped_data}
+
+                      
