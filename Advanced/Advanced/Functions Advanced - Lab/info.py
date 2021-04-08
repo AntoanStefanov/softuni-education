@@ -42,6 +42,8 @@ print(filtered_nums)
 print(mapped_nums)  # Тук се присвоява ретърна от lambdata
 
 
-############## Packing Arguments *args * kwargs #################################
+############## Packing Arguments *args **kwargs #################################
+
+
 
 
