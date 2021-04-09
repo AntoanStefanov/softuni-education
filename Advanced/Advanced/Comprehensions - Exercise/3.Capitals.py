@@ -10,3 +10,4 @@ dict_comprehension = {country: capital for country,
 
 {print(f'{country} -> {capital}')
  for country, capital in dict_comprehension.items()}
+
