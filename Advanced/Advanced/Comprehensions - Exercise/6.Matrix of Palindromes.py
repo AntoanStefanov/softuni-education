@@ -3,10 +3,8 @@
 # Better way to generate alphabet:
 import string
 alphabet = dict(zip(range(26), string.ascii_lowercase))
-print(alphabet)
 
 rows, columns = [int(n) for n in input().split()]
-
 matrix_of_palindromes = []
 
 for row in range(rows):
