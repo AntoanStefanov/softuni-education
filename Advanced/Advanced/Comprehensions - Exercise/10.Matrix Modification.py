@@ -19,4 +19,5 @@ while True:
             matrix[row][col] -= value
     else:
         print('Invalid coordinates')
-print(matrix)
+        
+[print(' '.join(map(str, row))) for row in matrix]
