@@ -18,3 +18,13 @@ for row in range(rows):
                 matrix_of_palindromes[row][col] += alphabet[row + col]
 
 [print(' '.join(row)) for row in matrix_of_palindromes]
+
+
+# Comprehension may 2020 Tanya
+
+rows, columns = [int(x) for x in input().split()]
+
+matrix = [[f"{chr(row)}{chr(row + col)}{chr(row)}" for col in range(columns)]
+          for row in range(97, 97 + rows)]
+
+[print(' '.join(row)) for row in matrix]
