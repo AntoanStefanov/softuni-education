@@ -71,3 +71,15 @@ def baba(**kwargs):  # kwargs = keyword arguments (наименувани арг
 
 
 baba(a=1, b=2, c=3)
+
+############ Unpacking with * / ** #################
+
+print(*[1, 2, 3])  # 1, 2, 3
+
+
+def sm_func(name, age):
+    print(f'{name} is {age} years old')
+
+
+person = {'age': 20, 'name': 'Tony'}
+sm_func(**person)
