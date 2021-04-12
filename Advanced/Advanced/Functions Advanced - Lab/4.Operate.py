@@ -16,3 +16,18 @@ def operate(operator, *args):
 
 
 print(operate("*", 0, 2, 3))
+# Refactured
+
+
+def operate1(operator, *args):
+
+    operations = {
+        '+': lambda x, y: x + y,
+        '-': lambda x, y: x - y,
+        '*': lambda x, y: x * y,
+        "/": lambda x, y: x / y,
+    }
+    return reduce(operations[operator], args)
+
+
+print(operate1("*", 0, 2, 3))
