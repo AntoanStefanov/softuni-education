@@ -1,11 +1,11 @@
-from itertools import permutations
+from itertools import permutations, chain
 
 
-data = [int(n) for n in input().split(', ')]
-
-
-perms = permutations(data)
+data = input().split(', ')
+n = len(data)  # n permutaions
+perms = set(permutations(['-'] * n + ['+'] * n, n))
 
 for p in list(perms):
-    print(p)
- 
+    expression = ''.join(chain(*zip(p, data)))
+    res = eval(expression)
+    print(f'{expression}={res}')
