@@ -83,3 +83,27 @@ def sm_func(name, age):
 
 person = {'age': 20, 'name': 'Tony'}
 sm_func(**person)
+
+
+#### Recursion ####
+
+# Функция, която извиква себе си
+# Дъно на рекурсията (Когато го стигне спира рекурсията иначе ще стане безкрайна)
+# Условие , при което рекурсията трябва да спре и връща дадена стойност
+
+# Останалата част на рекурсията се нарича централна част или рекурсивна част
+# Логиката - взима се малка част  обработва се
+# и останалата част се подава за рекурсиране нататък.
+def baba1():
+    return baba1()
+# Recusrion error maximum recursion depth exceeded 1000 max
+
+
+def factorial(n):  # factorial
+    if n == 1:  # Base case
+        return 1
+    return n * factorial(n - 1)  # Recursive Case
+
+
+print(factorial(5))
+
