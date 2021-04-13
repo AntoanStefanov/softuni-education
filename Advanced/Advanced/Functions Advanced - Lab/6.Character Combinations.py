@@ -1,5 +1,6 @@
 from itertools import combinations, permutations
-
+help(combinations)
+help(permutations)
 string = input()
 
 perms = permutations(string, len(string))
