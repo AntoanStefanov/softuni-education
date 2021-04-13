@@ -1,6 +1,8 @@
+from itertools import combinations, permutations
+
 string = input()
 
-def combinations(string):
-    string = list(string)
-    for char in string:
-        
+perms = permutations(string, len(string))
+
+for p in perms:
+    print(''.join(p))
