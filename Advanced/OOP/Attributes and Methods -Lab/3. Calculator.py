@@ -1,7 +1,17 @@
 class Calculator:
-    def __init__(self, *args):
-        self.numbers = args # self.numbers == tuple
+
+    @staticmethod
+    def add(*args):
+        return sum(args)
+
+    @staticmethod
+    def multiply(*args):
+        print(type(args))
+        res = 1
+        for n in args:
+            res *= n
+        return res
 
 
-nums = Calculator(1, 2, 3, 4, 5)
-print(sum(nums.numbers))
+print(Calculator.add(5, 10, 4))
+print(Calculator.multiply(1, 2, 3, 5))
