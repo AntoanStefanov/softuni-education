@@ -32,4 +32,6 @@ class Hotel:
             else:
                 free.append(room.number)
 
-        print(f"Hotel {self.name} has {self.guests} total guests\nFree rooms: {', '.join([str(n) for n in free])}\nTaken rooms: {', '.join([str(n) for n in taken])}")
+        print(f"Hotel {self.name} has {self.guests} total guests")
+        print(f"Free rooms: {', '.join([str(n) for n in free])}")
+        print(f"Taken rooms: {', '.join([str(n) for n in taken])}")
