@@ -50,6 +50,7 @@ class Document:
     def __repr__(self):
         return f"Document {self.id}: {self.file_name}; category {self.category_id}, topic {self.topic_id}, tags: {', '.join(self.tags)}"
 
+
 class Storage:
     def __init__(self):
         self.categories = []
@@ -64,49 +65,72 @@ class Storage:
         if topic not in self.topics:
             self.topics.append(topic)
 
-    
     def add_document(self, document):
         if document not in self.documents:
-            self.documents.append(document)    
-        
+            self.documents.append(document)
 
-    def edit_category(self, category_id: int, new_name:str):
+    def edit_category(self, category_id: int, new_name: str):
         for category in self.categories:
             if category.id == category_id:
                 category.edit(new_name)
-                return 
-    
+                return
+
     def edit_topic(self, topic_id: int, new_topic: str, new_storage_folder: str):
         for topic in self.topics:
             if topic.id == topic_id:
                 topic.edit(new_topic, new_storage_folder)
-                return 
-    
+                return
+
     def edit_document(self, document_id: int, new_file_name: str):
         for document in self.documents:
             if document.id == document_id:
                 document.edit(new_file_name)
                 break
 
-    def delete_category(self, category_id): # – delete the category with the provided topic_id
+    # – delete the category with the provided topic_id
+    def delete_category(self, category_id):
         for category in self.categories:
             if category.id == category_id:
                 self.categories.remove(category)
                 return
-    def delete_topic(self, topic_id): # – delete the topic with the provided id
+
+    def delete_topic(self, topic_id):  # – delete the topic with the provided id
         for topic in self.topics:
             if topic.id == topic_id:
                 self.topics.remove(topic)
                 return
+
     def delete_document(self, document_id):
         for document in self.documents:
             if document.id == document_id:
                 self.documents.remove(document)
                 return
-        
-    def get_document(self, document_id): 
+
+    def get_document(self, document_id):
         for document in self.documents:
             if document.id == document_id:
                 return document
 
-    def •	__repr__(self): 
+    def __repr__(self):
+        representation = ''
+        for document in self.documents:
+            representation += f'{document}\n'
+        return representation
+
+
+c1 = Category(1, "work")
+t1 = Topic(1, "daily tasks", "C:\\work_documents")
+d1 = Document(1, 1, 1, "finilize project")
+
+d1.add_tag("urgent")
+d1.add_tag("work")
+
+storage = Storage()
+storage.add_category(c1)
+storage.add_topic(t1)
+storage.add_document(d1)
+
+print(c1)
+print(t1)
+print(storage.get_document(1))
+print(storage)
