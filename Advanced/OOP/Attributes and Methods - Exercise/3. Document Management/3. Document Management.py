@@ -87,14 +87,13 @@ class Storage:
                 document.edit(new_file_name)
                 break
 
-    # – delete the category with the provided topic_id
     def delete_category(self, category_id):
         for category in self.categories:
             if category.id == category_id:
                 self.categories.remove(category)
                 return
 
-    def delete_topic(self, topic_id):  # – delete the topic with the provided id
+    def delete_topic(self, topic_id):
         for topic in self.topics:
             if topic.id == topic_id:
                 self.topics.remove(topic)
