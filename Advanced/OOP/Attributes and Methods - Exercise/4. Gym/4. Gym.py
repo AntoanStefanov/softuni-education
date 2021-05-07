@@ -27,17 +27,19 @@ class Equipment:
     def __repr__(self):
         return f"Equipment <{self.equipment_id}> {self.name}"
 
+
 class ExercisePlan:
     exercise_plan_id = 0
-    def __init__(self, trainer_id, equipment_id, duration): 
+
+    def __init__(self, trainer_id, equipment_id, duration):
         ExercisePlan.exercise_plan_id += 1
         self.trainer_id = trainer_id
         self.equipment_id = equipment_id
-        self.duration = duration # in minutes
+        self.duration = duration  # in minutes
         self.exercise_plan_id = ExercisePlan.exercise_plan_id
-    
+
     @classmethod
-    def from_hours(cls, trainer_id:int, equipment_id:int, hours:int):
+    def from_hours(cls, trainer_id: int, equipment_id: int, hours: int):
         cls(trainer_id, equipment_id, hours * 60)
 
     @staticmethod
@@ -45,7 +47,28 @@ class ExercisePlan:
         return ExercisePlan.exercise_plan_id + 1
 
     def __repr__(self):
-        return f"Plan <{self.exercise_plan_id}> with duration {self.duration} minutes" 
+        return f"Plan <{self.exercise_plan_id}> with duration {self.duration} minutes"
+
+
+class Subscription:
+    subscription_id = 0
+
+    def __init__(self, date: str, customer_id: int, trainer_id: int, exercise_id: int):
+        Subscription.subscription_id += 1
+        self.date = date
+        self.customer_id = customer_id
+        self.trainer_id = trainer_id
+        self.exercise_id = exercise_id
+        self.subscription_id = Subscription.subscription_id
+
+    @staticmethod
+    def get_next_id():
+        return subscription_id + 1
+
+    def __repr__(self):
+        return f"Subscription <{self.exercise_id}> on {self.date}"
+
+
 customer = Customer("John", "Maple Street", "john.smith@gmail.com")
 print(customer)
 print(customer.get_next_id())
