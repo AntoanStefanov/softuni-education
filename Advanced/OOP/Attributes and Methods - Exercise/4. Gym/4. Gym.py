@@ -24,6 +24,9 @@ class Equipment:
         self.name = name
         self.equipment_id = Equipment.equipment_id
 
+    def __repr__(self):
+        return f"Equipment <{self.equipment_id}> {self.name}"
+
 
 customer = Customer("John", "Maple Street", "john.smith@gmail.com")
 print(customer)
