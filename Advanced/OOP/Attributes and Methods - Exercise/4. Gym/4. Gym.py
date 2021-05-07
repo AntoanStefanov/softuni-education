@@ -68,7 +68,19 @@ class Subscription:
     def __repr__(self):
         return f"Subscription <{self.exercise_id}> on {self.date}"
 
+class Trainer:
+    trainer_id = 0
 
+    def __init__(self, name):
+        Trainer.trainer_id += 1
+        self.name = name
+        self.trainer_id = Trainer.trainer_id
+    
+    def __repr__(self):
+        return f"Trainer <{self.trainer_id}> {self.name}"
+
+    def get_next_id(self):
+        return Trainer.trainer_id
 customer = Customer("John", "Maple Street", "john.smith@gmail.com")
 print(customer)
 print(customer.get_next_id())
