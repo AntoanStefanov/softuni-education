@@ -81,6 +81,27 @@ class Trainer:
 
     def get_next_id(self):
         return Trainer.trainer_id
+
+
+class Gym:
+    def __init__(self):
+        self.customers = []
+        self.trainers = []
+        self.equipment = []
+        self.plans = []
+        self.subscriptions = []
+
+    def add_customer(self, customer: Customer): 
+        if customer not in self.customers:
+            self.customers.append(customer)
+    
+    def add_trainer(self, trainer: Trainer): 
+        if trainer not in self.trainers:
+            self.trainers.append(trainer)
+
+
+
+
 customer = Customer("John", "Maple Street", "john.smith@gmail.com")
 print(customer)
 print(customer.get_next_id())
