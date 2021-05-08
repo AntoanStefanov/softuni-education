@@ -68,6 +68,7 @@ class Subscription:
     def __repr__(self):
         return f"Subscription <{self.exercise_id}> on {self.date}"
 
+
 class Trainer:
     trainer_id = 0
 
@@ -75,7 +76,7 @@ class Trainer:
         Trainer.trainer_id += 1
         self.name = name
         self.trainer_id = Trainer.trainer_id
-    
+
     def __repr__(self):
         return f"Trainer <{self.trainer_id}> {self.name}"
 
@@ -91,32 +92,44 @@ class Gym:
         self.plans = []
         self.subscriptions = []
 
-    def add_customer(self, customer: Customer): 
+    def add_customer(self, customer):
         if customer not in self.customers:
             self.customers.append(customer)
-    
-    def add_equipment(self, equipment: Equipment): 
+
+    def add_equipment(self, equipment):
         if equipment not in self.equipment:
             self.equipment.append(equipment)
-    
-    def add_trainer(self, trainer: Trainer): 
+
+    def add_trainer(self, trainer):
         if trainer not in self.trainers:
             self.trainers.append(trainer)
 
-    def add_plan(self, plan: ExercisePlan):
+    def add_plan(self, plan):
         if plan not in self.plans:
             self.plans.append(plan)
 
-    def add_subscription(self, subscription: Subscription):
+    def add_subscription(self, subscription):
         if subscription not in self.subscriptions:
             self.subscriptions.append(subscription)
 
-    def subscription_info(self, subscription_id:int): 
+    def subscription_info(self, subscription_id: int):
+        info = ''
         for subscription in self.subscriptions:
-            if subscription_id == subscription.id:
-                return subscription
-                customer_id = subscription.customer_id
-                trainer_id = subscription.trainer_id
+            if subscription_id == subscription.subscription_id:
+                info += f'{subscription}\n'
+                for customer in self.customers:
+                    if customer.customer_id == subscription.customer_id:
+                        info += f'{customer}\n'
+                for trainer in self.trainers:
+                    if trainer.trainer_id == subscription.trainer_id:
+                        info += f'{trainer}\n'
+                for equipment in self.equipment:
+                    if equipment.equipment_id == subscription.exercise_id:
+                        info += f'{equipment}\n'
+                for plan in self.plans:
+                    if plan.exercise_plan_id == subscription.exercise_id:
+                        info += f'{plan}\n'
+        return info
 
 
 customer = Customer("John", "Maple Street", "john.smith@gmail.com")
@@ -134,3 +147,4 @@ gym.add_plan(plan)
 gym.add_subscription(subscription)
 
 print(Customer.get_next_id())
+print(gym.subscription_info(1))
