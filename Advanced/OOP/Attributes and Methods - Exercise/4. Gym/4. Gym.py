@@ -99,7 +99,15 @@ class Gym:
         if trainer not in self.trainers:
             self.trainers.append(trainer)
 
+    def add_plan(self, plan: ExercisePlan):
+        if plan not in self.plans:
+            self.plans.append(plan)
 
+    def add_subscription(self, subscription: Subscription):
+        if subscription not in self.subscriptions:
+            self.subscriptions.append(subscription)
+
+    def subscription_info(self, subscription_id:int): 
 
 
 customer = Customer("John", "Maple Street", "john.smith@gmail.com")
