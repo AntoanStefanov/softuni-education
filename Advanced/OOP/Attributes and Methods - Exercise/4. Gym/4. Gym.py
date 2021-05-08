@@ -95,6 +95,10 @@ class Gym:
         if customer not in self.customers:
             self.customers.append(customer)
     
+    def add_equipment(self, equipment: Equipment): 
+        if equipment not in self.equipment:
+            self.equipment.append(equipment)
+    
     def add_trainer(self, trainer: Trainer): 
         if trainer not in self.trainers:
             self.trainers.append(trainer)
@@ -108,8 +112,25 @@ class Gym:
             self.subscriptions.append(subscription)
 
     def subscription_info(self, subscription_id:int): 
+        for subscription in self.subscriptions:
+            if subscription_id == subscription.id:
+                return subscription
+                customer_id = subscription.customer_id
+                trainer_id = subscription.trainer_id
 
 
 customer = Customer("John", "Maple Street", "john.smith@gmail.com")
-print(customer)
-print(customer.get_next_id())
+equipment = Equipment("Treadmill")
+trainer = Trainer("Peter")
+subscription = Subscription("14.05.2020", 1, 1, 1)
+plan = ExercisePlan(1, 1, 20)
+
+gym = Gym()
+
+gym.add_customer(customer)
+gym.add_equipment(equipment)
+gym.add_trainer(trainer)
+gym.add_plan(plan)
+gym.add_subscription(subscription)
+
+print(Customer.get_next_id())
