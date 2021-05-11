@@ -131,6 +131,45 @@ class Zoo:
             return f"You tended all the animals. They are happy. Budget left: {self.__budget}"
         return "You have no budget to tend the animals. They are unhappy."
 
+    def profit(self, amount):
+        self.__budget += amount
+
+# -	Returns the following string:
+# You have {total_animals_count} animals
+# ----- {amount_of_lions} Lions:
+# {lion1}
+# …
+# ----- {amount_of_tigers} Tigers:
+# {tiger1}
+# …
+# ----- {amount_of_cheetahs} Cheetahs:
+# {cheetah1}
+# …
+
+    def animals_status(self):
+        status = ''
+        lions = [animal for animal in self.animals if type(
+            animal).__name__ == 'Lion']
+        tigers = [animal for animal in self.animals if type(
+            animal).__name__ == 'Tiger']
+        cheetahs = [animal for animal in self.animals if type(
+            animal).__name__ == 'Cheetah']
+
+        status += f'You have {len(self.animals)} animals\n'
+        status += f'----- {len(lions)} Lions:\n'
+        for lion in lions:
+            status += f'{lion}\n'
+        status += f'----- {len(tigers)} Tigers:\n'
+        for tiger in tigers:
+            status += f'{tiger}\n'
+        status += f'----- {len(cheetahs)} Cheetahs:\n'
+        for ch in cheetahs:
+            status += f'{ch}\n'
+        return status
+
+    def workers_status(self):
+        pass
+
 
 zoo = Zoo("Zootopia", 3000, 5, 8)
 
@@ -165,5 +204,5 @@ print(zoo.pay_workers())
 print(zoo.fire_worker("Adam"))
 
 # Printing statuses
-# print(zoo.animals_status())
+print(zoo.animals_status())
 # print(zoo.workers_status())
