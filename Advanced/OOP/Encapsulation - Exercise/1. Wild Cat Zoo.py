@@ -134,18 +134,6 @@ class Zoo:
     def profit(self, amount):
         self.__budget += amount
 
-# -	Returns the following string:
-# You have {total_animals_count} animals
-# ----- {amount_of_lions} Lions:
-# {lion1}
-# …
-# ----- {amount_of_tigers} Tigers:
-# {tiger1}
-# …
-# ----- {amount_of_cheetahs} Cheetahs:
-# {cheetah1}
-# …
-
     def animals_status(self):
         status = ''
         lions = [animal for animal in self.animals if type(
@@ -167,8 +155,40 @@ class Zoo:
             status += f'{ch}\n'
         return status
 
+# -	Returns the following string:
+# You have {total_workers_count} workers
+# ----- {amount_of_keepers} Keepers:
+# {keeper1}
+# …
+# ----- {amount_of_caretakers} Caretakers:
+# {caretaker1}
+# …
+# ----- {amount_of_vetes} Vets:
+# {vet1}
+# …
+
     def workers_status(self):
-        pass
+        status = ''
+
+        keepers = [person for person in self.workers if type(
+            person).__name__ == 'Keeper']
+        caretakers = [person for person in self.workers if type(
+            person).__name__ == 'Caretaker']
+        vets = [person for person in self.workers if type(
+            person).__name__ == 'Vet']
+
+        status += f'You have {len(self.workers)} workers\n'
+        status += f'----- {len(keepers)} Keepers:\n'
+        for keeper in keepers:
+            status += f'{keeper}\n'
+        status += f'----- {len(caretakers)} Caretakers:\n'
+        for caretaker in caretakers:
+            status += f'{caretaker}\n'
+        status += f'----- {len(vets)} Vets:\n'
+        for vet in vets:
+            status += f'{vet}\n'
+
+        return status
 
 
 zoo = Zoo("Zootopia", 3000, 5, 8)
@@ -205,4 +225,4 @@ print(zoo.fire_worker("Adam"))
 
 # Printing statuses
 print(zoo.animals_status())
-# print(zoo.workers_status())
+print(zoo.workers_status())
