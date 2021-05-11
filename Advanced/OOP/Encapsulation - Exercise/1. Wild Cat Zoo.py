@@ -88,6 +88,12 @@ class Zoo:
             total_cost += worker.salary
         return total_cost
 
+    def get_all_animals_needs(self):
+        all_animals_needs = 0
+        for animal in self.animals:
+            all_animals_needs += animal.get_needs()
+        return all_animals_needs
+
     def add_animal(self, animal, price):
         if self.__budget - price < 0:
             return "Not enough budget"
@@ -112,9 +118,18 @@ class Zoo:
         return f"There is no {worker_name} in the zoo"
 
     def pay_workers(self):
-        if self.__budget >= self.total_salary_cost():
-            self.__budget -= self.total_salary_cost()
+        total_salary_cost = self.total_salary_cost()
+        if self.__budget >= total_salary_cost:
+            self.__budget -= total_salary_cost
             return f"You payed your workers. They are happy. Budget left: {self.__budget}"
+        return "You have no budget to pay your workers. They are unhappy"
+
+    def tend_animals(self):
+        all_animals_needs = self.get_all_animals_needs()
+        if self.__budget >= all_animals_needs:
+            self.__budget -= all_animals_needs
+            return f"You tended all the animals. They are happy. Budget left: {self.__budget}"
+        return "You have no budget to tend the animals. They are unhappy."
 
 
 zoo = Zoo("Zootopia", 3000, 5, 8)
@@ -130,7 +145,6 @@ prices = [200, 190, 204, 156, 211, 140]
 workers = [Keeper("John", 26, 100), Keeper("Adam", 29, 80), Keeper("Anna", 31, 95), Caretaker("Bill", 21, 68), Caretaker(
     "Marie", 32, 105), Caretaker("Stacy", 35, 140), Vet("Peter", 40, 300), Vet("Kasey", 37, 280), Vet("Sam", 29, 220)]
 
-
 # Adding all animals
 for i in range(len(animals)):
     animal = animals[i]
@@ -140,3 +154,16 @@ for i in range(len(animals)):
 # Adding all workers
 for worker in workers:
     print(zoo.hire_worker(worker))
+
+# Tending animals
+print(zoo.tend_animals())
+
+# Paying keepers
+print(zoo.pay_workers())
+
+# Fireing worker
+print(zoo.fire_worker("Adam"))
+
+# Printing statuses
+# print(zoo.animals_status())
+# print(zoo.workers_status())
