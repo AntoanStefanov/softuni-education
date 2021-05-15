@@ -5,12 +5,12 @@ class Person:
 
 
 class Child(Person):
-    # ЗАЩО Е  НУЖЕН __init__ метод в Child class, като работи и така ? Минава през
-    # inita на Person class
+    # ЗАЩО Е  НУЖЕН __init__ метод в Child class, като работи само с pass ?
+    # Минава през inita на Person class
+    pass
     # def __init__(self, name, age):
     #     super().__init__(name, age)
-    # И само с pass работи
-    pass
+
 
 
 person = Person("Peter", 25)
