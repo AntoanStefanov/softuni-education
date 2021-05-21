@@ -44,3 +44,27 @@ output_stack = []
 while stack:
     output_stack.append(stack.pop())
 print(*output_stack, sep=', ')
+
+
+###### with min and max functions ### Second mine solution ###
+
+stack = []
+
+n = int(input())
+
+
+for _ in range(n):
+    command = input()
+    if command.startswith('1'):
+        element = int(command.split(' ')[1])
+        stack.append(element)
+    elif stack:
+        if command == '2':
+            stack.pop()
+        elif command == '3':
+            print(max(stack))
+        elif command == '4':
+            print(min(stack))
+
+stack.reverse()
+print(', '.join([str(n) for n in stack]))
