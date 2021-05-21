@@ -74,3 +74,22 @@ while orders:
     food -= order
 else:
     print('Orders complete')
+
+
+############ SECOND TIME SOLVE #####
+
+
+quantity_of_the_food = int(input())
+orders = deque([int(order) for order in input().split()])
+
+print(max(orders))
+
+
+while orders:
+    if quantity_of_the_food >= orders[0]:
+        quantity_of_the_food -= orders.popleft()
+    else:
+        print(f"Orders left: {' '.join([str(order) for order in orders])}")
+        break
+else:
+    print('Orders complete')
