@@ -1,15 +1,16 @@
 # My solution
 numbers = input().split()
 
-stack = [] # All methods stack is using - push(append at the end) / pop(removing at the end) = LIFO
+# All methods stack is using - push(append at the end) / pop(removing at the end) = LIFO
+stack = []
 
 for index in range(len(numbers) - 1, -1, -1):
-    stack.append(numbers[index]) # Pushing into the stack
+    stack.append(numbers[index])  # Pushing into the stack
 
 print(' '.join(stack))
 
 
-### Sept 2020 - Velizar
+# Sept 2020 - Velizar
 
 inputs = input().split()
 
@@ -20,3 +21,14 @@ while inputs:
     stack.append(next_input)
 
 print(' '.join(stack))
+
+
+# Second Mine ######################### 2 stacks
+
+stack = input().split(' ')
+second_stack = []
+
+while stack:
+    second_stack.append(stack.pop())
+
+print(' '.join(second_stack))
