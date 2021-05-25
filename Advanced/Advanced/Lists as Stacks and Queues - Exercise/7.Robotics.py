@@ -1,4 +1,5 @@
-from collections import deque
+from time import strftime, gmtime # import for my way
+from collections import deque # import for my way
 
 
 def next_second(h, m, s):
@@ -57,3 +58,53 @@ while products:
     print(
         f"{current_robot[0]} - {product} [{time[0]:02d}:{time[1]:02d}:{time[2]:02d}]")
     waiting_robots.append(current_robot)
+
+
+#################################### MY WAY ####################
+
+
+def get_sec(time_str):
+    """Get Seconds from time."""
+    h, m, s = time_str.split(':')
+    return int(h) * 3600 + int(m) * 60 + int(s)
+
+
+robots_info = input().split(';')
+robots = []
+robots_time_info = {}
+for r in robots_info:
+    name, time = r.split('-')
+    robots.append([name, int(time), True])
+    robots_time_info[name] = int(time)
+
+time_in_seconds = get_sec(input())
+
+products = deque()
+
+while True:
+    product = input()
+    if product == 'End':
+        break
+    products.append(product)
+
+while products:
+    time_in_seconds += 1
+    product = products.popleft()
+    is_product_free = True
+    for robot in robots:
+        if robot[2] and is_product_free:  # IF robot AND PRODUCT ARE FREE
+            robot[2] = False
+            is_product_free = False
+            robot[1] -= 1
+            time_in_str = strftime('%H:%M:%S', gmtime(time_in_seconds))
+            print(f'{robot[0]} - {product} [{time_in_str}]')
+            # Trqbva li da maham 1 seckunda kogato e vzel produkta, da
+        elif not robot[2]:  # BUSY
+            # Kato se osvobodi vednaga li vzema produkta? Da, tova se sluchva v gorniq if
+            robot[1] -= 1
+            if robot[1] <= 0:  # E TUKA E <= SHTOTO PUSKAT VREME NA ROBOT 0 i stava -1
+                robot[2] = True
+                robot[1] = robots_time_info[robot[0]]
+
+    if is_product_free:
+        products.append(product)
