@@ -53,3 +53,40 @@ while True:
                     print(f'{previous_car} was hit at {crossing_car[0]}.')
     else:
         cars_on_wait.append(data)
+
+########################### SECOND SOLUTION #########################
+
+
+green_light_duration = int(input())
+free_window_duration = int(input())
+cars = deque()
+passed_cars = 0
+while True:
+    command = input()
+
+    if command == 'END':
+        print('Everyone is safe.')
+        print(f'{passed_cars} total cars passed the crossroads.')
+        break
+    elif command == 'green':
+        green_light = green_light_duration
+        while cars and green_light >= len(cars[0]):
+            green_light -= len(cars.popleft())
+            passed_cars += 1
+            
+        if green_light and cars:
+            total_time = green_light + free_window_duration
+            if total_time >= len(cars[0]):
+                cars.popleft()
+                passed_cars += 1
+            else:
+                crashing_car = deque(cars.popleft())
+                whole_car = ''.join(crashing_car.copy())
+                while total_time:
+                    total_time -= 1
+                    crashing_car.popleft()
+                print('A crash happened!')
+                print(f'{whole_car} was hit at {crashing_car.popleft()}.')
+                break
+    else:
+        cars.append(command)
