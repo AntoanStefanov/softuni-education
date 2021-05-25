@@ -37,3 +37,34 @@ if not locks:
     print(f"{len(bullets)} bullets left. Earned ${price_of_intelligence - bullets_cost}")
 elif not bullets:
     print(f"Couldn't get through. Locks left: {len(locks)}")
+
+###### SECOND TIME ############
+
+
+bullet_price = int(input())
+gun_barrel_size = int(input())
+bullets = [int(bullet) for bullet in input().split()]
+locks = deque([int(lock) for lock in input().split()])
+intelligence_value = int(input())
+initial_bullets = len(bullets)
+current_barrel_size = gun_barrel_size
+
+while locks and bullets:
+    bullet = bullets.pop()
+    if bullet <= locks[0]:
+        locks.popleft()
+        print('Bang!')
+    else:
+        print('Ping!')
+    current_barrel_size -= 1
+    if current_barrel_size == 0 and bullets:
+        print('Reloading!')
+        current_barrel_size = gun_barrel_size
+
+if locks:
+    print(f"Couldn't get through. Locks left: {len(locks)}")
+else:  # if bullets and no bullets
+    shots = initial_bullets - len(bullets)
+    bullets_cost = shots * bullet_price
+    earned = intelligence_value - bullets_cost
+    print(f'{len(bullets)} bullets left. Earned ${earned}')
