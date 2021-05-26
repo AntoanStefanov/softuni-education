@@ -1,5 +1,4 @@
-from collections import defaultdict
-phone_book = defaultdict(str)
+phone_book = {}
 
 while True:
     data = input()
