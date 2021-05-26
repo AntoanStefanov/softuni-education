@@ -6,9 +6,9 @@ symbol_occurrences = defaultdict(int)
 for char in string:
     symbol_occurrences[char] += 1
 
-sorted_dict = sorted(symbol_occurrences)
+sorted_list_occurrences = sorted(symbol_occurrences)
 
-for key in sorted_dict:
+for key in sorted_list_occurrences:
     print(f"{key}: {symbol_occurrences[key]} time/s")
 
 
@@ -36,7 +36,7 @@ for char in string:
 
     symbol_occurrences[char] += 1
 
-sorted_dict = sorted(symbol_occurrences)
+sorted_list_occurrences = sorted(symbol_occurrences)
 
-for key in sorted_dict:
+for key in sorted_list_occurrences:
     print(f"{key}: {symbol_occurrences[key]} time/s")
