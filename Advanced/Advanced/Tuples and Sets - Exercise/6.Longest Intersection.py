@@ -27,3 +27,26 @@ for _ in range(n):
 
 print(
     f'Longest intersection is {list(longest_intersection)} with length {len(longest_intersection)}')
+
+
+############### SECOND TIME #######
+
+n = int(input())
+longest_intersection = set()
+for _ in range(n):
+    first_range, second_range = input().split('-')
+    first_range_start, first_range_end = [
+        int(x) for x in first_range.split(',')]
+    second_range_start, second_range_end = [
+        int(x) for x in second_range.split(',')]
+
+    first_set = set(range(first_range_start, first_range_end + 1))
+    second_set = set(range(second_range_start, second_range_end + 1))
+
+    current_intersection = first_set.intersection(second_set)
+
+    if len(current_intersection) > len(longest_intersection):
+        longest_intersection = current_intersection
+
+print(
+    f'Longest intersection is {list(longest_intersection)} with length {len(longest_intersection)}')
