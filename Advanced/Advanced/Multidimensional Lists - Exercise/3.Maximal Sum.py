@@ -50,3 +50,34 @@ for n_row in range(rows - 2):
 print(f'Sum = {submatrix_sum}')
 for row in submatrix:
     print(*row)
+
+# Second Time #
+
+rows, columns = [int(x) for x in input().split()]
+matrix = []
+for r in range(rows):
+    matrix.append([int(x) for x in input().split()])
+
+
+matrix_max_sum = None
+
+
+# -2 Защото квадрата си е 3х3 и няма смисъл да чеквам последните 2 реда защото излизат от матрицата
+for row in range(rows - 2):
+    # -2 Защото квадрата си е 3х3 и няма смисъл да чеквам последните 2 колони защото излизат от матрицата
+    for column in range(columns - 2):
+        first_row = [matrix[row][column], matrix[row]
+                     [column + 1], matrix[row][column + 2]]
+        second_row = [matrix[row + 1][column], matrix[row + 1]
+                      [column + 1], matrix[row + 1][column + 2]]
+        third_row = [matrix[row + 2][column], matrix[row + 2]
+                     [column + 1], matrix[row + 2][column + 2]]
+
+        current_matrix_sum = sum(first_row) + sum(second_row) + sum(third_row)
+        if matrix_max_sum == None or current_matrix_sum > matrix_max_sum:
+            matrix_max_sum = current_matrix_sum
+            best_matrix = [first_row, second_row, third_row]
+
+print(f'Sum = {matrix_max_sum}')
+for row in best_matrix:
+    print(' '.join([str(n) for n in row]))
