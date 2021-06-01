@@ -71,3 +71,81 @@ for direction in commands:
         break
 else:
     print(f"{all_coals - collected_coals} coals left. ({miner_row}, {miner_column})")
+
+################### SECOND TIME #######
+
+n = int(input())
+movements = input().split()
+
+
+def read_matrix(n):
+    matrix = []
+    for _ in range(n):
+        matrix.append(input().split())
+    return matrix
+
+
+def get_all_coals(matrix):
+    all_coals = 0
+    for row in matrix:
+        for character in row:
+            if character == 'c':
+                all_coals += 1
+    return all_coals
+
+
+def get_miner_position(matrix):
+    position = None
+    for i in range(len(matrix)):
+        for j in range(len(matrix[0])):
+            if matrix[i][j] == 's':
+                position = [i, j]
+    return position
+
+
+def is_potential_position_valid(potential_position):
+    return 0 <= potential_position[0] < n and 0 <= potential_position[1] < n
+
+
+def get_potential_position(miner_position, direction):
+    # Rechnik moje bi ? {'left': (0, -1)}
+    if direction == 'left':
+        potential_position = miner_position[0], miner_position[1] - 1
+    elif direction == 'right':
+        potential_position = miner_position[0], miner_position[1] + 1
+    elif direction == 'up':
+        potential_position = miner_position[0] - 1, miner_position[1]
+    elif direction == 'down':
+        potential_position = miner_position[0] + 1, miner_position[1]
+
+    return potential_position
+
+
+def move(matrix, direction, miner_position):
+
+    potential_position = get_potential_position(miner_position, direction)
+    if is_potential_position_valid(potential_position):
+        miner_position[0], miner_position[1] = potential_position[0], potential_position[1]
+        row = miner_position[0]
+        col = miner_position[1]
+        if matrix[row][col] == 'e':
+            return -1
+        elif matrix[row][col] == 'c':
+            matrix[row][col] = '*'
+
+
+matrix = read_matrix(n)
+miner_position = get_miner_position(matrix)
+
+for movement in movements:
+    if move(matrix, movement, miner_position) == -1:
+        print(f'Game over! ({miner_position[0]}, {miner_position[1]})')
+        break
+else:
+    left_coals = get_all_coals(matrix)
+    if left_coals:
+        print(
+            f'{left_coals} coals left. ({miner_position[0]}, {miner_position[1]})')
+    else:
+        print(
+            f'You collected all coals! ({miner_position[0]}, {miner_position[1]})')
