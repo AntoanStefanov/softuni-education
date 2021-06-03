@@ -103,29 +103,31 @@ def get_miner_position(matrix):
     return position
 
 
-def is_potential_position_valid(potential_position):
-    return 0 <= potential_position[0] < n and 0 <= potential_position[1] < n
+def is_potential_position_valid(row, col):
+    return 0 <= row < n and 0 <= col < n
 
 
-def get_potential_position(miner_position, direction):
+def get_potential_position(row, col, direction):
     # Rechnik moje bi ? {'left': (0, -1)}
     if direction == 'left':
-        potential_position = miner_position[0], miner_position[1] - 1
+        col -= 1
     elif direction == 'right':
-        potential_position = miner_position[0], miner_position[1] + 1
+        col += 1
     elif direction == 'up':
-        potential_position = miner_position[0] - 1, miner_position[1]
+        row -= 1
     elif direction == 'down':
-        potential_position = miner_position[0] + 1, miner_position[1]
+        row += 1
 
-    return potential_position
+    return row, col
 
 
 def move(matrix, direction, miner_position):
 
-    potential_position = get_potential_position(miner_position, direction)
-    if is_potential_position_valid(potential_position):
-        miner_position[0], miner_position[1] = potential_position[0], potential_position[1]
+    row, col = get_potential_position(
+        miner_position[0], miner_position[1], direction)
+
+    if is_potential_position_valid(row, col):
+        miner_position[0], miner_position[1] = row, col
         row = miner_position[0]
         col = miner_position[1]
         if matrix[row][col] == 'e':
@@ -149,3 +151,5 @@ else:
     else:
         print(
             f'You collected all coals! ({miner_position[0]}, {miner_position[1]})')
+
+
