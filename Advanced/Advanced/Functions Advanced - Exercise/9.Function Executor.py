@@ -17,3 +17,22 @@ def multiply_numbers(num1, num2):
 
 
 print(func_executor((sum_numbers, (1, 2)), (multiply_numbers, (2, 4))))
+
+
+######## SECOND TIME ######
+
+def func_executor(*args):
+    res = []
+    for tuple in args:
+        func = tuple[0]
+        arguments = tuple[1]
+        res.append(func(*arguments))
+    return res
+
+
+def sum_numbers(num1, num2):
+    return num1 + num2
+
+
+def multiply_numbers(num1, num2):
+    return num1 * num2
