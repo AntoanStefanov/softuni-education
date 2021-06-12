@@ -7,7 +7,7 @@ def replace_and_reverse_sentence(sentence):
     #  the backslash \,
     #  the caret ^,
     #  and the hyphen -
-    sentence = re.sub(r'[-,.!?]', '@', sentence)  # In char class
+    sentence = re.sub(r'[-,.!?]', '@', sentence)
     words = sentence.split()
     return ' '.join(words[::-1])
 
