@@ -5,10 +5,12 @@ punctuation_marks_pattern = r'[^a-zA-Z\s]'
 
 
 def get_n(pattern, sentence):
+
     return len(re.findall(pattern, sentence))
 
 
 def prepare_output(sentences):
+
     output = ''
     for index, sentence in enumerate(sentences, 1):
         n_letters = get_n(letters_pattern, sentence)
@@ -18,6 +20,7 @@ def prepare_output(sentences):
 
 
 def start_program():
+
     with open('text.txt', 'r') as file:
         sentences = file.read().split('\n')
         output = prepare_output(sentences)
