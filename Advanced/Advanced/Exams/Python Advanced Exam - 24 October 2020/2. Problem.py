@@ -126,3 +126,61 @@ if queens_capturing_king:
         print(queen_capturing_king)
 else:
     print('The king is safe!')
+
+
+######## SECOND WAY ##########
+
+n = 8
+
+
+def read_matrix(n):
+    matrix = []
+    for row in range(n):
+        matrix.append([])
+        matrix[row] = input().split()
+    return matrix
+
+
+def find_king_position(matrix):
+    for row in range(len(matrix)):
+        for col in range(len(matrix[0])):
+            if matrix[row][col] == 'K':
+                return [row, col]
+
+
+def is_index_valid(r, c, n):
+    return 0 <= r < n and 0 <= c < n
+
+
+matrix = read_matrix(n)
+king_position = find_king_position(matrix)
+positions = [
+    [0, -1],  # LEFT
+    [-1, -1],  # LEFT UP
+    [-1, 0],  # UP
+    [-1, +1],  # RIGHT UP
+    [0, +1],  # RIGHT
+    [+1, +1],  # RIGHT DOWN
+    [1, 0],  # DOWN
+    [+1, -1],  # LEFT DOWN
+]
+queens = []
+for position in positions:
+    row, col = king_position[0], king_position[1]
+    while True:
+        potential_row, potential_col = position[0] + \
+            row, position[1] + col
+
+        if is_index_valid(potential_row, potential_col, n):
+            if matrix[potential_row][potential_col] == 'Q':
+                queens.append([potential_row, potential_col])
+                break
+            else:
+                row, col = potential_row, potential_col
+        else:
+            break
+if queens:
+    for queen in queens:
+        print(queen)
+else:
+    print("The king is safe!")
