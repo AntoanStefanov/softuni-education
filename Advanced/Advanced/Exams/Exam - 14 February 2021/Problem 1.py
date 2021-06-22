@@ -4,9 +4,9 @@ firework_effects = deque([int(x) for x in input().split(', ')])
 explosive_power = [int(x) for x in input().split(', ')]
 perfect_firework_show = False
 fireworks = {
-    'Palm firework': 0,
-    'Willow firework': 0,
-    'Crossette firework': 0,
+    'Palm Fireworks': 0,
+    'Willow Fireworks': 0,
+    'Crossette Fireworks': 0,
 }
 
 while True:
@@ -25,13 +25,13 @@ while True:
     mixed_sum = firework_effect + explosive_power[-1]
 
     if mixed_sum % 3 == 0 and (not mixed_sum % 5 == 0):
-        fireworks['Palm firework'] += 1
+        fireworks['Palm Fireworks'] += 1
         explosive_power.pop()
     elif mixed_sum % 5 == 0 and (not mixed_sum % 3 == 0):
-        fireworks['Willow firework'] += 1
+        fireworks['Willow Fireworks'] += 1
         explosive_power.pop()
     elif mixed_sum % 5 == 0 and mixed_sum % 3 == 0:
-        fireworks['Crossette firework'] += 1
+        fireworks['Crossette Fireworks'] += 1
         explosive_power.pop()
     else:
         firework_effect -= 1
@@ -50,4 +50,12 @@ else:
     print("Sorry. You can't make the perfect firework show.")
 
 if firework_effects:
-    print(f"Firework Effects left: {}
+    print(
+        f"Firework Effects left: {', '.join([str(x) for x in firework_effects])}")
+
+if explosive_power:
+    print(
+        f"Explosive Power left: {', '.join([str(x) for x in explosive_power])}")
+
+for firework, count in fireworks.items():
+    print(f'{firework}: {count}')
