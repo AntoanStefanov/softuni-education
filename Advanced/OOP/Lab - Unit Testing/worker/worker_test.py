@@ -2,7 +2,7 @@ import unittest
 from worker import Worker
 
 
-class WorkerTest(unittest.TestCase):
+class WorkerTests(unittest.TestCase):
     def setUp(self):
         self.worker = Worker('Tony', 10000, 100)
 
