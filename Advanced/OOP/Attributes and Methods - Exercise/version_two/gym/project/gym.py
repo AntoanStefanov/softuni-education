@@ -27,6 +27,20 @@ class Gym:
             self.subscriptions.append(subscription)
         
     def subscription_info(self, subscription_id: int):
+        res = ''
         for subscription in self.subscriptions:
             if subscription.id == subscription_id:
-                pass
+                res += f'{subscription}\n'
+                for customer in self.customers:
+                    if customer.id == subscription.customer_id:
+                        res += f'{customer}\n'
+                for trainer in self.trainers:
+                    if trainer.id == subscription.trainer_id:
+                        res += f'{trainer}\n'
+                for plan in self.plans:
+                    for equipment in self.equipment:
+                        if equipment.id == plan.equipment_id:
+                            res += f'{equipment}\n'
+                    if plan.id == subscription.exercise_id:
+                        res += f'{plan}'
+        return res
