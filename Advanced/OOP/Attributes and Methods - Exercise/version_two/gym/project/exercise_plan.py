@@ -13,7 +13,7 @@ class ExercisePlan:
 
     @staticmethod
     def get_next_id():
-        return ExercisePlan.id + 1
+        return ExercisePlan.id
 
     def __repr__(self):
         return f"Plan <{self.id}> with duration {self.duration} minutes"
