@@ -7,8 +7,8 @@ class Equipment:
 
     @staticmethod
     def get_next_id():
-        return Equipment.id + 1
-        
+        return Equipment.id
+
     def __repr__(self):
         return f"Equipment <{self.id}> {self.name}"
 
