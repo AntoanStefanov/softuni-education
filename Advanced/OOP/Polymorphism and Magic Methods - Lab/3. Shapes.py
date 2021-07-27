@@ -5,11 +5,11 @@ from math import pi
 class Shape(ABC):
 
     @abstractmethod
-    def calculate_area():
+    def calculate_area(self):
         pass
 
     @abstractmethod
-    def calculate_perimeter():
+    def calculate_perimeter(self):
         pass
 
 
