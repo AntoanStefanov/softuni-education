@@ -9,7 +9,6 @@ function solve(input) {
     let percent = percentNumber * 0.01;
     let neededLiters = liters * (1 - percent);
     console.log(neededLiters);
-
 }
 
 solve(['85', '75', '47', '17']);
