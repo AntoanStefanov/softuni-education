@@ -4,7 +4,7 @@ function solve(input) {
     const availableDays = Number(input[2]);
     const neededTimeToRead = totalPages / readPagesForHour;
     const hoursPerDay = neededTimeToRead / availableDays;
-    console.log(hoursPerDay)
+    console.log(hoursPerDay);
 }
 
 solve(['212', '20', '2']);
