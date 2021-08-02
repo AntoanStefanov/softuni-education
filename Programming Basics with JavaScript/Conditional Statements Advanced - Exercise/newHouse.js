@@ -14,7 +14,7 @@ function solve(input) {
     } else if (flowers === 'Narcissus') {
         cost = numberFlowers * 3;
     } else if (flowers === 'Gladiolus') {
-        
+        cost = numberFlowers * 2.50;
     }
 }
 
