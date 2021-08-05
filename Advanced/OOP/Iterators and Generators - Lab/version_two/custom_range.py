@@ -66,7 +66,7 @@ for num in one_to_ten:
 for num in reversed(one_to_ten):
     print(num)
 
-## Judge 100/100 ##
+# Judge 100/100 ##
 # class custom_range:
 #
 #     def __init__(self, s, end):
