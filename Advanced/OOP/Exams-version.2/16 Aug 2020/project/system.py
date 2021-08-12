@@ -64,10 +64,10 @@ class System:
         analyze += f'Software Components: {len(System._software)}\n'
         total_memory = sum([hardware.memory for hardware in System._hardware])
         total_used_memory = sum([hardware.used_memory for hardware in System._hardware])
-        analyze += f'Total Operational Memory: {int(total_used_memory)} / {int(total_memory)}\n'
+        analyze += f'Total Operational Memory: {total_used_memory} / {total_memory}\n'
         total_capacity = sum([hardware.capacity for hardware in System._hardware])
         total_used_capacity = sum([hardware.used_capacity for hardware in System._hardware])
-        analyze += f'Total Capacity Taken: {int(total_used_capacity)} / {int(total_capacity)}'
+        analyze += f'Total Capacity Taken: {total_used_capacity} / {total_capacity}'
 
         return analyze
 
