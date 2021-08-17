@@ -8,30 +8,12 @@ function solve(input) {
     switch (operation) {
         case '+':
             result = firstNumber + secondNumber;
-            if (result % 2 === 0) {
-                evenOrOdd = 'even';
-            } else {
-                evenOrOdd = 'odd';
-            }
-            console.log(`${firstNumber} ${operation} ${secondNumber} = ${result} - ${evenOrOdd}`);
             break;
         case '-':
             result = firstNumber - secondNumber;
-            if (result % 2 === 0) {
-                evenOrOdd = 'even';
-            } else {
-                evenOrOdd = 'odd';
-            }
-            console.log(`${firstNumber} ${operation} ${secondNumber} = ${result} - ${evenOrOdd}`);
             break;
         case '*':
             result = firstNumber * secondNumber;
-            if (result % 2 === 0) {
-                evenOrOdd = 'even';
-            } else {
-                evenOrOdd = 'odd';
-            }
-            console.log(`${firstNumber} ${operation} ${secondNumber} = ${result} - ${evenOrOdd}`);
             break;
         case '/':
             if (secondNumber === 0) {
@@ -52,7 +34,12 @@ function solve(input) {
     }
 
     if (operation === '+' || operation == '-' || operation === '*') {
-        
+        if (result % 2 === 0) {
+            evenOrOdd = 'even';
+        } else {
+            evenOrOdd = 'odd';
+        }
+        console.log(`${firstNumber} ${operation} ${secondNumber} = ${result} - ${evenOrOdd}`);
     }
 }
 
