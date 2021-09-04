@@ -1,12 +1,28 @@
 function solve(input) {
-    for (let hero of input) {
-        let name = input[0];
-        let level = input[1];
-    }
+
 
     class Hero {
-        constructor(heroName,)
+        constructor(heroName, level, items) {
+            this.heroName = heroName;
+            this.level = level;
+            this.items = items;
+        }
     }
+
+    let heroes = [];
+
+    for (let heroData of input) {
+        heroData = heroData.split(' / ')
+        let name = heroData[0];
+        let level = Number(heroData[1]);
+        let items = heroData[2].split(', ');
+
+        let hero = new Hero(name, level, items);
+        heroes.push(hero);
+
+    }
+
+    // for 
 }
 
 solve([
