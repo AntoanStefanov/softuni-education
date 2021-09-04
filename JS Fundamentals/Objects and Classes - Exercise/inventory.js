@@ -7,22 +7,32 @@ function solve(input) {
             this.level = level;
             this.items = items;
         }
+
+        representation() {
+            this.items.sort();
+            return `Hero: ${this.heroName}\nlevel => ${this.level}\nitems => ${this.items.join(', ')}`;
+        }
     }
 
     let heroes = [];
 
     for (let heroData of input) {
-        heroData = heroData.split(' / ')
-        let name = heroData[0];
-        let level = Number(heroData[1]);
-        let items = heroData[2].split(', ');
+        let data = heroData.split(' / ')
+        let name = data[0];
+        let level = Number(data[1]);
+        let items = data[2].split(', ');
+        
 
         let hero = new Hero(name, level, items);
         heroes.push(hero);
 
     }
 
-    // for 
+    heroes.sort((a, b) => a.level - b.level);
+
+    for (let hero of heroes) {
+        console.log(hero.representation());
+    }
 }
 
 solve([
