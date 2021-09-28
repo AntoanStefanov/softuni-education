@@ -10,6 +10,7 @@ function addItem() {
     let textToAdd = document.getElementById('newItemText').value;
     let newLiElement = document.createElement('li');
     newLiElement.appendChild(document.createTextNode(textToAdd));
+    // newLiElement.textContent = textToAdd; 12 line replacer.
     newLiElement.appendChild(a);
     //
 
