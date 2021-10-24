@@ -15,7 +15,7 @@ function solve() {
             if (priceEl.value !== '' && yearEl.value !== '') {
                 let price = Number(priceEl.value);
                 let year = Number(yearEl.value);
-                if (price >= 0 && year >= 0) {
+                if (price >= 0 && year >= 0) {  
                     let firstTR = document.createElement('tr');
                     firstTR.setAttribute('class', 'info');
                     let firstTDforFirstTR = document.createElement('td');
