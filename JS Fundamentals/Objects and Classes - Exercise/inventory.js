@@ -9,7 +9,7 @@ function solve(input) {
         }
 
         representation() {
-            this.items.sort();
+            //  this.items.sort(); ////////
             return `Hero: ${this.heroName}\nlevel => ${this.level}\nitems => ${this.items.join(', ')}`;
         }
     }
@@ -21,8 +21,6 @@ function solve(input) {
         let name = data[0];
         let level = Number(data[1]);
         let items = data[2].split(', ');
-        
-
         let hero = new Hero(name, level, items);
         heroes.push(hero);
 
@@ -31,6 +29,7 @@ function solve(input) {
     heroes.sort((a, b) => a.level - b.level);
 
     for (let hero of heroes) {
+        hero.items.sort();
         console.log(hero.representation());
     }
 }
