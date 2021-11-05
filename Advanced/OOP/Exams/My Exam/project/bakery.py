@@ -124,7 +124,7 @@ class Bakery:
                         info += f'{self.name} does not have in the menu:\n'
                         for drink in not_in_menu:
                             info += f'{drink}\n'
-                    return info
+                    return info[:-1]
         return f"Could not find table {table_number}"
 
     def leave_table(self, table_number: int):
@@ -135,7 +135,7 @@ class Bakery:
                 table.clear()
 
                 info = f'Table: {table_number}\n'
-                info += f'Bill: {bill + 0.01:.2f}'
+                info += f'Bill: {bill:.2f}'
                 return info
 
     def get_free_tables_info(self):
@@ -143,8 +143,8 @@ class Bakery:
         for table in self.tables_repository:
             res = table.free_table_info()
             if res:
-                info += f'{res}\n'  # 42 test
-        return info[:-1]
+                info += f'{res}\n'
+        return info
 
     def get_total_income(self):
         return f"Total income: {self.total_income:.2f}lv"
