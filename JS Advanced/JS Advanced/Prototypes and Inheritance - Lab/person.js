@@ -27,8 +27,10 @@ function createPerson(firstName, lastName) {
         },
         set: function (value) {
             let [firstName, lastName] = value.split(' ');
-            this.firstName = firstName;
-            this.lastName = lastName;
+            if (firstName && lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
         },
         configurable: true,
         enumerable: true,
@@ -45,3 +47,11 @@ console.log(person.fullName); //George Peterson
 person.fullName = "Nikola Tesla";
 console.log(person.firstName); //Nikola
 console.log(person.lastName); //Tesla
+
+person = createPerson("Albert", "Simpson");
+console.log(person.fullName); //Albert Simpson
+person.firstName = "Simon";
+console.log(person.fullName); //Simon Simpson
+person.fullName = "Peter";
+console.log(person.firstName);  // Simon
+console.log(person.lastName);  // Simpson

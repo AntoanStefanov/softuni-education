@@ -1,0 +1,36 @@
+1.npm i -> da instalirash vsichko ot package.json , terminal v prject papkata
+eslint --init
+
+"devDependencies": {
+        "eslint": "^8.3.0",
+}
+
+tova go nqmashe v package.json-a,
+moje da izteglish resursite nanovo i da kopirash json-ite samo ?
+
+
+
+2. src folder
+ -api
+ -views
+ -app.js
+v index.html -> <script src="/src/app.js" type="module"></script>
+
+
+moje da startirame testovete za probva
+
+3. - PUSNI SI server.js ot terminala v papkata kakto znaesh
+
+v package.json ima obekta scripts
+
+4. - OTVARASH NOV TERMINAL ZA SERVERA
+        -npm run start (startira na port 3000 http servera) * izpolzvai nego, toi ne se restartira
+        - NOV TERMINAL -> npm run test - da startirash testovete
+
+
+npm uninstall eslint --save-dev
+
+IZPOLZVAI ctrl + f5 za restart na chorme-a
+
+
+moje da sa nujni promeni pri LOGIN I REGISTER NA API.js zavisi kakvo info e nujno za profile

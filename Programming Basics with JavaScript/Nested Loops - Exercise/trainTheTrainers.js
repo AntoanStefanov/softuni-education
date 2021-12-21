@@ -5,8 +5,8 @@ function solve(input) {
     let numberJudges = Number(input[index]);
     let presenationName;
     let grade;
-    let totalGrade;
-    let neededGrade = 0;
+    let presentationGrade;
+    let totalGrade = 0;
     let finish = false;
     let numberGrades = 0;
 
@@ -18,19 +18,19 @@ function solve(input) {
             finish = true;
             break;
         }
-        totalGrade = 0;
+        presentationGrade = 0;
         for (let i = 1; i <= numberJudges; i++) {
             index++;
             grade = Number(input[index]);
+            presentationGrade += grade;
             totalGrade += grade;
-            neededGrade += grade;
             numberGrades += 1;
         }
 
-        console.log(`${presenationName} - ${(totalGrade / numberJudges).toFixed(2)}.`);
+        console.log(`${presenationName} - ${(presentationGrade / numberJudges).toFixed(2)}.`);
     }
-    console.log(`Student's final assessment is ${(neededGrade / numberGrades).toFixed(2)}.`);
-    neededGrade = 0;
+    console.log(`Student's final assessment is ${(totalGrade / numberGrades).toFixed(2)}.`);
+
 }
 
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hash Routing Demo</title>
+  </head>
+  <body>
+    <h1>Hash Routing Demo</h1>
+    <nav>
+      <a href="/home">Home</a>
+      <a href="/catalog">Catalog</a>
+      <a href="/about">About</a>
+    </nav>
+
+    <main></main>
+  </body>
+
+  <script>
+    window.addEventListener('popstate', (event) => {
+      console.log('history changed');
+      console.log(event);
+      showContent();
+    });
+
+    const views = {
+      '/home': () => '<h2>Home Page</h2>',
+      '/catalog': () => '<h2>Catalog</h2>',
+      '/about': () => '<h2>About Us</h2>',
+    };
+
+    const main = document.querySelector('main');
+    // showContent();
+    // ako smenim url-a sled kato stranicata e zaredila ? zashtoto s navigaciq bachka, ami ako ruchno smenim url ?
+
+    function showContent(event) {
+      const pathname = window.location.pathname;
+      const view = views[pathname];
+      // moje hasha da e nevaliden, nqkoi da napishe #asd v url-a
+      // syotvetno nqma takova view(stranica)
+      if (typeof view === 'function') {
+        main.innerHTML = view();
+      } else {
+        main.innerHTML = '<h2>404</h2><p>Page not found</p>';
+      }
+    }
+  </script>
+</html>

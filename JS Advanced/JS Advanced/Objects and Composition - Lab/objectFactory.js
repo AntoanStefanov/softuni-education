@@ -2,10 +2,11 @@ function factory(library, orders) {
     let products = [];
 
     for (let order of orders) {
+        let device = Object.assign({}, order.template);
         for (let part of order.parts) {
-            order.template[part] = library[part]
+            device[part] = library[part];
         }
-        products.push(order.template);
+        products.push(device);
     }
     return products;
 }

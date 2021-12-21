@@ -1,0 +1,7 @@
+For 1 & 2 check ports : 1 - 5503 , 2 - 5502, 
+change them to the ports you use
+
+Tip: ctrl + F in test.js files to find the port lines: type "localhost"
+
+
+

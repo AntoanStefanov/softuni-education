@@ -1,4 +1,4 @@
-function solve(face, suit) {
+function createCard(face, suit) {
     let validFaces = ['2', '3', '4', '5', '6', '7', '8', '9',
         '10', 'J', 'Q', 'K', 'A'];
     let validSuits = {
@@ -9,7 +9,7 @@ function solve(face, suit) {
     };
 
     if (!(suit in validSuits) || !(validFaces.includes(face))) {
-        throw Error('Error');
+        throw Error(`Invalid card: ${face + suit}`);
     }
 
     return {
@@ -21,8 +21,8 @@ function solve(face, suit) {
     }
 }
 
-let x = solve('A', 'S');
+let x = createCard('A', 'S');
 console.log(x.toString())
-console.log(solve('10', 'H'));
-console.log(solve('1', 'C'));
-// console.log(solve('2', 'K'));
+console.log(createCard('10', 'H'));
+console.log(createCard('1', 'C'));
+console.log(createCard('2', 'K'));

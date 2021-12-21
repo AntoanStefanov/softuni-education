@@ -1,0 +1,20 @@
+[
+    {
+        "title": "First Article",
+        "content": "First article SADASDASDASDDDDDDDDDDDDDDdddddd",
+        "author": "John Smith",
+        "color": "red"
+    },
+    {
+        "title": "Second Article",
+        "content": "Second article SADASDASDASDDDDDDDDDDDDDDdddddd",
+        "author": "Tony Stefanov",
+        "color": "blue"
+    },
+    {
+        "title": "Third Article",
+        "content": "Third article SADASDASDASDDDDDDDDDDDDDDdddddd",
+        "author": "Marie Curie",
+        "color": "green"
+    }
+]

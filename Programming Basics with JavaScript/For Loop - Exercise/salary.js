@@ -1,8 +1,38 @@
-function solve(input) {
-    let salary = Number(input[1]);
+// function solve(input) {
+//     let salary = Number(input[1]);
 
-    for (let index = 2; index < input.length; index++) {
+//     for (let index = 2; index < input.length; index++) {
+//         let web = input[index];
+//         if (web === 'Facebook') {
+//             salary -= 150;
+//         } else if (web === 'Instagram') {
+//             salary -= 100;
+//         } else if (web === 'Reddit') {
+//             salary -= 50;
+//         }
+
+//         if (salary <= 0) {
+//             console.log("You have lost your salary.")
+//             break;
+//         }
+//     }
+
+//     if (salary) {
+//         console.log(salary);
+//     }
+// }
+
+
+function solve(input) {
+    let index = 0;
+    let numberOpenTabs = Number(input[index]);
+    index++;
+    let salary = Number(input[index]);
+    index++;
+
+    for (let i = 0; i <= numberOpenTabs; i++) {
         let web = input[index];
+        index++;
         if (web === 'Facebook') {
             salary -= 150;
         } else if (web === 'Instagram') {

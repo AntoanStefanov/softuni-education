@@ -16,7 +16,6 @@ const sections = {
     'logoutBtn': onLogout
 }
 
-// start app in home view
 showHomePage();
 
 function navOnClick(event) {
@@ -27,7 +26,6 @@ function navOnClick(event) {
         if (typeof view === 'function') {
             // chak tuk prevent, za da moje ako e link kum google da go otvori
             // <!-- <a href="https://www.google.com/?hl=bg">Google</a> -->
-
             event.preventDefault();
             view();
         }
