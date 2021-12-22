@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from .config import KEY, MYSQL
+
+# .config WILL ALSO WORK !!! YOU IMPORT FROM OPENED(ROOT, CURRENT, OPENED) FOLDER !! WHICH MEANS FIRST STOREFRONT FOLDER
+from storefront.config import KEY, MYSQL
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
