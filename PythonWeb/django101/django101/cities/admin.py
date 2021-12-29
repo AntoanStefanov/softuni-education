@@ -1,5 +1,5 @@
-# Here we register our models/tables in the administration.
-# adding/controlling tables in administration with one line -> 12
+# Here we register our models/tables in the administration(panel).
+# adding/controlling tables in administration with one line -> 13
 from django.contrib import admin
 
 from django101.cities.models import Person
