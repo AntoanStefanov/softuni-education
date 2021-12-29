@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from django101.models import Person
+from django101.cities.models import Person
 
 
 def index(request):

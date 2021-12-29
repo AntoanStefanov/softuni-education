@@ -36,7 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django101'  # add package == add app == be part of black magic
+
+    'django101',  # add package == add app == be part of black magic
+    'django101.cities',
 ]
 
 MIDDLEWARE = [
