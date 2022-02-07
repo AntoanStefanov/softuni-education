@@ -20,7 +20,7 @@ def index(request):
                 form.save()
                 return redirect('index')
         else:
-            # if a GET (or any other method) we'll create a blank form.
+            # if a GET (or any other method) create a blank form.
             form = RegisterForm()
 
         return render(request, 'home-no-profile.html', {'form': form})
