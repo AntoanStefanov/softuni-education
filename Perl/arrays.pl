@@ -88,7 +88,7 @@ print( join( ' ', @customers_array ), "\n" );
 my @number_array = ( 1, 2, 3, 4, 5, 6, 7, 8 );
 
 #  $_ each individual value in array if a variable is not defined.
-
+# regex could be used with grep in {} https://stackoverflow.com/questions/2925604/how-do-i-search-a-perl-array-for-a-matching-string
 my @odd_array = grep { $_ % 2 } @number_array;
 
 # OR
