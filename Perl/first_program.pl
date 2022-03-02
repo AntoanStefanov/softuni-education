@@ -16,9 +16,13 @@ use v5.16;
 
 # "" -> INTERPOLATIONS INCLUDING \n, '' -> PLAIN STRING, here \n will be just \n.
 
+# length() is only used with strings(scalars)
+# to find array length use scalar()
+
 my $asd = 'Hello';
 print('Hello World');
 print($asd);
+# $, = ', '
 
 # my $perl_cmd = "perl --version";
 
