@@ -60,12 +60,36 @@ print( join( ', ', @mixed_data_types ), "\n" );
 say "Length with Pushed at start array Value ", unshift @mixed_data_types, 21;
 print( join( ', ', @mixed_data_types ), "\n" );
 
-
 # splice out values
 # splice(array, starting index, how many items we pull out), returns values
 say "Remove index 0 - 2 ", splice @mixed_data_types, 0, 2;
 print( join( ', ', @mixed_data_types ), "\n" );
 
-print(join(" ", ("list", "of", "words", "\n")))
+print( join( " ", ( "list", "of", "words", "\n" ) ) );
 
 # split turn a string into an array
+
+my $customers       = 'tony, mony, shony';
+my @customers_array = split( ', ', $customers );
+print( join( ' ', @customers_array ), "\n" );
+
+# reverse an array
+
+@customers_array = reverse(@customers_array);
+print( join( ' ', @customers_array ), "\n" );
+
+# sort array
+
+@customers_array = sort(@customers_array);
+print( join( ' ', @customers_array ), "\n" );
+
+# grep -> filter list , according to expression
+
+my @number_array = ( 1, 2, 3, 4, 5, 6, 7, 8 );
+#  $_ each individual value in array if a variable is not defined.
+
+my @odd_array = grep { $_ % 2 } @number_array;
+
+# OR
+# my @odd_array = grep( $_ % 2, @number_array );
+print( join( ' ', @odd_array ), "\n" );
