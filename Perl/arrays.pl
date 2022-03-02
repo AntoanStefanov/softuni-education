@@ -86,10 +86,17 @@ print( join( ' ', @customers_array ), "\n" );
 # grep -> filter list , according to expression
 
 my @number_array = ( 1, 2, 3, 4, 5, 6, 7, 8 );
+
 #  $_ each individual value in array if a variable is not defined.
 
 my @odd_array = grep { $_ % 2 } @number_array;
 
 # OR
+
 # my @odd_array = grep( $_ % 2, @number_array );
+
 print( join( ' ', @odd_array ), "\n" );
+
+# MAP
+my @double_array = map { $_ * 2 } @number_array;
+print( join( ' ', @double_array ), "\n" );
