@@ -73,4 +73,4 @@ my $rand_num = 6;
 # PRINT THEN INCREMENT
 say "6++ = ", $rand_num++;
 # INCREMENT THEN PRINT
-say "7++ = ", ++$rand_num;
+say "++7 = ", ++$rand_num;
