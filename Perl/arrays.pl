@@ -2,7 +2,12 @@ use strict;
 use warnings;
 use diagnostics;
 use feature 'say';
+
 my @primes = ( 2, 3, 5, 7, 11, 13, 17 );
+
+# THIS WAY WE GET ARRAY LENGTH ! there is another way too
+my $len = @primes;
+say $len;
 
 my @mixed_data_types = ( 21, 'Tony', "Al. Stamb.", 1.80 );
 say @mixed_data_types;
