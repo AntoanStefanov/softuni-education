@@ -22,6 +22,7 @@ use v5.16;
 my $asd = 'Hello';
 print('Hello World');
 print($asd);
+
 # $, = ', '
 
 # my $perl_cmd = "perl --version";
@@ -229,6 +230,5 @@ print join( ", ", @abcs ) . "\n";
 #  INCREMENT LETTER
 my $letter = 'c';
 say "Next letter: ", ++$letter;
-
 
 #  ARRAYS
