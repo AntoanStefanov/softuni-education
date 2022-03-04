@@ -34,6 +34,7 @@ sub main {
     while ( my $line = <$FH_READ> ) {
 
         # https://stackoverflow.com/questions/10019049/what-does-do-in-perl
+        #  check \b if you need the word only https://stackoverflow.com/questions/6664151/difference-between-b-and-b-in-regex
         if ( $line =~ /Programmer/ ) {
 
 #           replacement
