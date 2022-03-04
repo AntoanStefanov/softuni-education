@@ -10,7 +10,7 @@ use feature 'switch';
 use v5.16;
 
 # INTRO & SCALARS
-
+# SCALARS ARE VARIABLES THAT HOLD UP JUST ONE VALUE. STRING NUMBER OR WHATEVER
 # %d used for integers.
 # concat strings -> . instead of +
 
