@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+use feature 'say';
 
 use Data::Dumper;
 
@@ -9,12 +10,28 @@ $| = 1;
 sub main {
 
 # if full path is used -> use single quotes, to NOT interpret the special characters in string, if there are ones.
-    my $input = 'text.csv';
+    my $input =
+'/home/antoan/GitHub/SoftUni-Education/Perl/Learn Perl 5 By Doing It/join_and_viewing_data_using_dumper/text.csv';
 
     open( my $fh, '<', $input ) or die "\nCannot open $input\n";
 
+    # INSTEAD OF WHILE LOOP LINE BY LINE, GET DATA IN ARRAY #
+
+    # read the contents into an array, if needed.
+    my @info = <$fh>;
+    shift(@info);
+    for my $line (@info) {
+        chomp $line;
+        my @values = split( /\s*,\s*/, $line );
+        say join( ", ", @values );
+    }
+
+    # INSTEAD OF WHILE LOOP LINE BY LINE, GET DATA IN ARRAY #
+
+    # WITH WHILE LOOP #
+    
     # read first line from file just like that. (remove headings)
-    <$fh>; # Skip first line.
+    <$fh>;    # Skip first line.
 
     while ( my $line = <$fh> ) {
 
@@ -29,6 +46,9 @@ sub main {
         print Dumper(@values);
     }
 
+    # WITH WHILE LOOP #
+
     close $fh;
 }
+
 main();
