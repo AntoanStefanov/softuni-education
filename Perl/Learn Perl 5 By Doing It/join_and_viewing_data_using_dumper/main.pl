@@ -33,6 +33,8 @@ sub main {
     # read first line from file just like that. (remove headings)
     <$fh>;    # Skip first line.
 
+    # FOR LOOPED EXHAUSTED file handle (comment for loop to check how code works with while)
+    # https://stackoverflow.com/questions/2802267/how-can-i-tell-if-a-filehandle-is-empty-in-perl/2802759
     while ( my $line = <$fh> ) {
 
 # By default chomp will chomp the $_ variable , $_ is the line if variable $line is not defined.
