@@ -19,6 +19,12 @@ sub main {
 
     # read the contents into an array, if needed.
     my @info = <$fh>;
+
+    foreach my $line (@info) {
+        chomp $line;
+        say $line;
+    }
+
     shift(@info);
     for my $line (@info) {
         chomp $line;
@@ -29,12 +35,13 @@ sub main {
     # INSTEAD OF WHILE LOOP LINE BY LINE, GET DATA IN ARRAY #
 
     # WITH WHILE LOOP #
-    
+
     # read first line from file just like that. (remove headings)
     <$fh>;    # Skip first line.
 
-    # FOR LOOPED EXHAUSTED file handle (comment for loop to check how code works with while)
-    # https://stackoverflow.com/questions/2802267/how-can-i-tell-if-a-filehandle-is-empty-in-perl/2802759
+# FOR LOOPED EXHAUSTED file handle (comment for loop to check how code works with while)
+# https://stackoverflow.com/questions/2802267/how-can-i-tell-if-a-filehandle-is-empty-in-perl/2802759
+
     while ( my $line = <$fh> ) {
 
 # By default chomp will chomp the $_ variable , $_ is the line if variable $line is not defined.
