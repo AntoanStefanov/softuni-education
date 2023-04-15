@@ -1,0 +1,25 @@
+body {
+  background-color: bisque;
+  margin: 0px;
+}
+
+nav {
+  background-color: coral;
+}
+
+ul {
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+li {
+  display: inline;
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+}
