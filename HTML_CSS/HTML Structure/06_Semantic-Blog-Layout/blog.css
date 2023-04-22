@@ -1,0 +1,25 @@
+body {
+  background: #3d96df;
+}
+
+section {
+  display: a;
+}
+
+article {
+  padding: 10px;
+  margin: 10px;
+  width: 50%;
+}
+
+.display-inline-flex {
+  /* to move them on row/column (reversed also) - inline-flex */
+  /* to move them on left/right/center/stretch - grid */
+  display: inline-flex;
+}
+
+article,
+footer,
+header {
+  background: #70b5ef;
+}
