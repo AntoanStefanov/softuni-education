@@ -1,15 +1,40 @@
 body {
   background: #3d96df;
+  margin: 0px;
 }
 
-section {
-  display: a;
+header {
+  margin: 10px;
+  width: -webkit-fill-available;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #b9cfe0;
+}
+
+header h1 {
+  margin: 10px 10px;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+header nav ul a {
+  text-decoration: none;
 }
 
 article {
-  padding: 10px;
+  /* padding: 10px;
   margin: 10px;
-  width: 50%;
+  width: 50%; */
 }
 
 .display-inline-flex {
