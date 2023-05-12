@@ -1,0 +1,18 @@
+@media all and (max-width: 600px) {
+  .w3-right.w3-hide-small {
+    display: none;
+  }
+
+  .w3-col.m6.w3-padding-large.w3-hide-small {
+    display: none;
+  }
+
+  /* copy selector from dev tools inspect */
+  .w3-col.m6.w3-padding-large:nth-child(2) {
+    width: 100%;
+  }
+
+  .w3-col.l6.w3-padding-large {
+    width: 100%;
+  }
+}

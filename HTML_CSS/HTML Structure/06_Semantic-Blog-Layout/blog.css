@@ -1,6 +1,11 @@
 body {
   background: #3d96df;
   margin: 0px;
+  margin: 0px 100px;
+}
+
+main {
+  margin-left: 15px;
 }
 
 header {
@@ -10,6 +15,14 @@ header {
   align-items: center;
   border-radius: 5px;
   border: 1px solid #b9cfe0;
+}
+
+article {
+  margin-right: 15px;
+  width: 35%;
+  padding: 15px;
+  /* border-radius: 5px;
+  border: 1px solid #b9cfe0; */
 }
 
 header h1 {
