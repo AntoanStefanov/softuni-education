@@ -23,9 +23,21 @@ body {
 }
 
 .logo {
-  border-right: 2px solid grey;
+  /* border-right: 2px solid grey; */
   margin-right: 20px;
-  padding-right: 20px;
+  padding-right: 5px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.logo::after {
+  background-color: grey;
+  display: inline-flex;
+  width: 1px;
+  height: 45px;
+  content: '';
+  margin-left: 20px;
 }
 
 .logo-addon {
@@ -46,6 +58,15 @@ body {
 .nav-item a {
   text-decoration: none;
   color: black;
+}
+
+.nav .nav-item:first-child {
+  background-color: #e24e2a;
+  color: white;
+}
+
+.nav .nav-item:first-child a {
+  color: white;
 }
 
 .header-image {

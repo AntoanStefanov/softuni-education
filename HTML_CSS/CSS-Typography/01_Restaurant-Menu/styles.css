@@ -10,6 +10,7 @@ h1 {
 }
 
 span {
+  /* Don't CTRL+S, sans-serif going on second row, which is a "X" in softuni Judge */
   font-family: Graphik Semibold Web, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-style: oblique;
   font-weight: 600;
