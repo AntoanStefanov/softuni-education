@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 65vw;
+}
+
+section {
+  display: flex;
+}
+
+.notes {
+  flex-direction: column;
+}
+
+.week {
+  flex-direction: column;
+}
+
+.workdays {
+  display: flex;
+}
+
+.weekdays span {
+  width: 50%;
+}
+
+.weekdays {
+  display: flex;
+}
+
+.reminders {
+  padding-bottom: 137px;
+}
+
+.special-dates {
+  padding-bottom: 98px;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 2rem;
+  border-collapse: collapse;
+}
