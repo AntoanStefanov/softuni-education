@@ -1,0 +1,29 @@
+body {
+  display: grid;
+  border-radius: 3px;
+  background: rgb(181, 216, 255);
+  padding: 5px 10px;
+  grid-template-areas: 'main';
+}
+
+header h1 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 5px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 5px 0px;
+  color: rgb(86, 40, 129);
+  text-decoration: none;
+}
+
+main {
+  grid-area: main;
+}
