@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: #d9d9d9;
+  /* max-width: 1000px;
+  max-height: 600px; */
+}
+
+.cards-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  margin: 50px;
+  max-width: 400px;
+}
+
+/* body > section > div > div:nth-child(2) > div > img {
+  width: 400px;
+  height: 266.5px;
+  position: relative;
+  left: -30px;
+  top: -20px;
+  object-fit: fill;
+} */
+
+
+body > section > div > div:nth-child(2) > img {
+  width: 400px;
+  height: 266.5px;
+}
+
+.card-no-img {
+  box-shadow: 0 3px 10px rgb(200 200 200);
+  /* box-shadow: 5px 10px #c8c8c8; */
+  padding: 20px 30px;
+}
+
+.card-content {
+  padding-bottom: 20px;
+}
+
+.card-content h2 {
+  padding-bottom: 10px;
+  color: #53576d;
+  font-size: 16px;
+}
+
+.card-content h3 {
+  padding-bottom: 30px;
+  font-weight: normal;
+}
+
+.card-content p {
+  padding-bottom: 10px;
+}
+
+.man-photo {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: fill;
+}
+
+.man-photo-div {
+  display: flex;
+  align-items: center;
+}
+
+.card-footer > span {
+  color: #aeb6c0;
+}
+
+.card-content p {
+  color: #6a6d82;
+}
+
+.man-photo-div span {
+  /* color: #aeb6c0; */
+  color: #094a99;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 20px 10px; */
+  padding-top: 20px;
+  border-top: 1px solid black;
+}
+
+.card-footer p {
+  margin-left: 10px;
+}

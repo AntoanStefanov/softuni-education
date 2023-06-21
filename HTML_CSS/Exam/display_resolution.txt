@@ -1,0 +1,3 @@
+1920x1080
+
+zooming in/out on Chronme with ctrl + scroll.
