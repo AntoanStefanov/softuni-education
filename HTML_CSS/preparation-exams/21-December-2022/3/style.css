@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Lato, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat, sans-serif;
+}
+
+.container {
+  /* width: 1920px; */
+  margin-top: 20px;
+  color: #5a6789;
+}
+
+.logo-container {
+  width: 170px;
+}
+
+.first-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0 70px;
+  font-size: 1.5rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #54546d;
+  font-weight: 600;
+}
+
+.nav-list-item {
+  list-style: none;
+}
+
+.main-header-background-image-container {
+  background-color: #54546d;
+  width: 100%;
+  height: 300px;
+}
+
+.main-header-background-image {
+  padding-top: 50px;
+  margin-left: -70px;
+}
+
+.main-heading {
+  display: block;
+  text-align: center;
+  margin-top: -230px;
+  color: white;
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.main {
+  margin-top: 50px;
+}
+
+.programs {
+  display: flex;
+  justify-content: space-around;
+  /* gap: 30px; */
+}
+
+.program {
+  flex: 0 0 30%;
+  max-height: 600px;
+  background-color: white;
+  border-radius: 15px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  /* box-shadow: 0.2em 0 .2em rgb(131, 129, 129); */
+  font-size: 1.6rem;
+}
+
+.program-info {
+  margin-top: 40px;
+  padding: 0 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.program-info h3 {
+  font-size: 2.3rem;
+}
+.program-basics .candidate-btn {
+  background-color: #9a5dc6;
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.program-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background-color: black;
+  color: white;
+  flex: 1 0 200px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.free .program-footer {
+  /* max-height: 200px; */
+}
+
+.program-footer .first-row-letters {
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.program-basics .program-footer {
+  background: linear-gradient(
+    90deg,
+    rgba(13, 154, 61) 0%,
+    rgba(40, 186, 96) 78%,
+    rgba(72, 211, 125) 100%
+  );
+}
+
+.paid.program .program-footer {
+  flex-direction: row;
+}
+
+.program-footer-first-part {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  height: 80%;
+  width: 1px;
+  background-color: white;
+}
+
+.program-footer-second-part {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.education-forms {
+  margin: 0 5rem;
+  font-size: 1.6rem;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-forms-info {
+  margin-top: 3.5rem;
+  font-size: 2rem;
+}
+
+.education-forms-benefits-table {
+  margin-top: 4rem;
+  border-top-left-radius: 30px;
+  /* border-bottom-left-radius: 30px; */
+  border-radius: 50px;
+}
+
+.education-forms-benefit:nth-child(odd) {
+  background-color: #e6e6e6;
+}
+
+.education-forms-benefit:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.education-forms-benefit {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  align-items: center;
+}
+
+.education-forms-benefit p {
+  flex: 0 0 50%;
+}
+
+.education-forms-benefit img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.financial-aid {
+  margin: 4rem 3rem;
+  font-size: 1.6rem;
+  display: flex;
+  margin-bottom: 10rem;
+}
+
+.financial-aid .image {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  object-fit: contain;
+  margin: auto;
+}
+
+.financial-aid .image img {
+  width: 80%;
+}
+
+.financial-aid .text {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 2.5rem;
+}
+
+div.program-footer:nth-child(3) > p:nth-child(1) {
+  padding-top: 20px;
+}
+
+div.program-footer:nth-child(3) > p:nth-child(2) {
+  padding-bottom: 20px;
+}
+
+footer {
+  background-color: #54546d;
+  color: white;
+  font-size: 1.6rem;
+  height: 5rem;
+  text-align: center;
+  padding-top: 2rem;
+}
