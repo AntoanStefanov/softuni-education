@@ -138,10 +138,6 @@ h6 {
   border-bottom-right-radius: 25px;
 }
 
-.free .program-footer {
-  /* max-height: 200px; */
-}
-
 .program-footer .first-row-letters {
   font-size: 2.5rem;
   letter-spacing: 0.1rem;
