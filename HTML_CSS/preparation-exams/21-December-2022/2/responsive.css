@@ -1,0 +1,153 @@
+@media all and (max-width: 600px) {
+  /* here without [div].div-header->display:flex has prioprity. why? dunno */
+  /* maybe bcs in luxury.css has the same selector .div-header. */
+  /* here selector specifity has 0, 1, 1. In luxury.css has 0, 1, 0 */
+  /* hover the move over the selector to check it out. */
+  div.div-header {
+    display: none;
+  }
+
+  header h3 {
+    font-size: 12px;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  header .button-header {
+    font-size: 12px;
+  }
+
+  /* header {
+    background-image: url('images/luxury-home.jpg') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 600px 700px !important ;
+  } */
+
+  section.options {
+    flex-direction: column;
+  }
+
+  section.options article {
+    width: 100%;
+    text-align: center;
+  }
+
+  section.options article a {
+    display: none;
+  }
+
+  section.gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.gallery a {
+    display: none;
+  }
+
+  section.gallery article img {
+    width: 280px;
+    height: 150px;
+  }
+
+  main h2 {
+    font-size: 24px !important;
+  }
+
+  div.blog-title {
+    padding: 40px 0 0 50px;
+  }
+
+  div.blog-title h4 {
+    font-size: 30px;
+  }
+
+  div.blog-title h4 span {
+    display: none;
+  }
+
+  div.blog-title a {
+    display: none;
+  }
+
+  .blog > article:nth-child(2) > img:nth-child(2) {
+    display: none;
+  }
+
+  div#about-blog {
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  div#about-blog h3 {
+    font-size: 12.5px;
+  }
+
+  div#about-blog p {
+    font-size: 10px;
+  }
+
+  div#about-blog button {
+    font-size: 10px;
+  }
+
+  div.magazine-title {
+    padding: 40px 0 0 50px;
+  }
+
+  div.magazine-title h4 {
+    font-size: 14px;
+  }
+
+  div.magazine-title a {
+    display: none;
+  }
+
+  main section.magazine {
+    padding-top: 20px;
+  }
+
+  .magazine > article:nth-child(2) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  div.magazine-info {
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  div.magazine-info img {
+    width: 94%;
+    padding: 0px 20px;
+  }
+
+  div.magazine-info h3 {
+    margin-bottom: 30px;
+  }
+
+  div.magazine-info p {
+    width: 95%;
+    margin: 0px auto;
+  }
+
+  div.magazine-info button {
+    font-size: 10px;
+    margin: 20px 0px;
+  }
+
+  footer {
+    flex-direction: column;
+    font-size: 12px;
+  }
+
+  footer a {
+    display: block;
+    margin-top: 6px;
+  }
+}
