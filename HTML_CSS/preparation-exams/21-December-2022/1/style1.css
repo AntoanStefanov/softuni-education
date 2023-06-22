@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
 * {
   margin: 0;
@@ -75,7 +75,13 @@ html {
   border: 1px solid white;
   text-decoration: none;
   border-radius: 20px;
-  padding: 0.2rem 1.5rem;
+  padding: 0.3rem 1.5rem;
   align-self: flex-start;
   margin: 15px 0px;
+  font-size: 1.2rem;
+}
+
+p,
+a {
+  font-weight: lighter;
 }
