@@ -295,3 +295,11 @@ footer {
   /* no overflow -> no border-radius */
   overflow: hidden;
 }
+
+.paid .program-info {
+  flex: 0 0 350px;
+}
+
+.btn-div {
+  flex: 0 0 168px;
+}
