@@ -15,6 +15,13 @@ html {
   font-family: Inter, sans-serif;
 }
 
+/* THAT's WHY grid items not taking ALL SPACE. */
+/* https://stackoverflow.com/questions/50417708/css-grid-layout-height-of-rows-never-works */
+div.card-header {
+  height: 100%;
+  width: 100%;
+}
+
 .container {
   max-width: 1800px;
   margin: 4rem auto;
@@ -69,6 +76,9 @@ html {
 
 .card-text {
   font-size: 1.3rem;
+  /* u set it 120, its 125, bcs the 'g' goes out below., uncomment height to see. */
+  /* height: 100%; */
+  /* when this happens just make it 125, so that u know it's the right size. */
 }
 
 .card-footer {
