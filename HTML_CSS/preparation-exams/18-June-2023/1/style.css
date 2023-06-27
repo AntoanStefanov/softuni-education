@@ -35,7 +35,10 @@ div.card-header {
 .card {
   display: grid;
   grid-template-columns: 540px;
+  /* grid-template-columns: 1fr; */
   grid-template-rows: 330px 440px;
+  /* grid-template-rows: 1fr 1.2fr; */
+  /* flex-basis: 0;  -> if 3 divs -> parent's width / 3 = each div's width*/
 }
 
 .card-no-img-container {
@@ -75,10 +78,12 @@ div.card-header {
 }
 
 .card-text {
+  /* text-align: center; */
   font-size: 1.3rem;
-  /* u set it 120, its 125, bcs the 'g' goes out below., uncomment height to see. */
   /* height: 100%; */
-  /* when this happens just make it 125, so that u know it's the right size. */
+  /* BUT THE TEXT ITSELF, the letters are still 125px, even with height:100%,
+  just the container is moving somehow, wtf 
+  just make the row 125px, so that at least u know it's the right size,*/
 }
 
 .card-footer {
