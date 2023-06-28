@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Flexbox</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- Container Reason:
+      https://youtu.be/3YW65K6LcIA?t=1653 -->
+      <div class="container">
+        <div class="logo">Flexbox</div>
+        <ul class="nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header class="header">
+      <div class="container">
+        <div class="text">
+          <h1>Flexbox Crash Course</h1>
+          <p>
+            This crash course was created by Brad Traversy to help you learn the
+            basics of flexbox. Flexbox is a very important and useful tool in
+            CSS.
+          </p>
+        </div>
+        <div class="img-wrapper">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Person_icon_BLACK-01.svg/1924px-Person_icon_BLACK-01.svg.png"
+            alt="person"
+          />
+        </div>
+      </div>
+    </header>
+    <section class="cards-section">
+      <div class="container">
+        <div class="cards">
+          <div class="card">
+            <h2>
+              <i class="fa-solid fa-arrows-up-down"></i> Alignment & Space
+            </h2>
+            <p>
+              A more efficient way to lay out, align and distribute space among
+              items in a container
+            </p>
+          </div>
+          <div class="card">
+            <h2>
+              <i class="fa-solid fa-arrows-up-down-left-right"></i> Tricky
+              Positioning
+            </h2>
+            <p>
+              Flexbox usually solves tricky problems including how to position
+              or dynamically resize elements on a page
+            </p>
+          </div>
+          <div class="card">
+            <h2><i class="fa-solid fa-mobile-button"></i> Responsive Design</h2>
+            <p>
+              Flexbox makes building a website layout (and making it
+              responsive!) much, much easier
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
