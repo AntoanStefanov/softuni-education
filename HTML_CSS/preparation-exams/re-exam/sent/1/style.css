@@ -1,0 +1,152 @@
+@import url('https://use.fontawesome.com/releases/v6.4.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: Inter, sans-serif;
+  height: 100vh;
+  background-color: black;
+}
+
+.main-container {
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+  background-image: url('images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: fill;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .inner-text {
+  color: rgb(90,89,89);
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
+
+.cards {
+  display: flex;
+  gap: 3rem;
+  padding: 5rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.first-card {
+  margin-bottom: 3rem;
+}
+
+.first-section .card {
+  /* width: 60%; */
+  display: flex;
+  background-color: white;
+  padding: 4rem;
+  align-items: center;
+  gap: 4rem;
+  /* height: 500px; */
+
+  
+}
+
+.second-section {
+  flex-basis: 35%;
+}
+
+.first-section {
+  flex-basis: 65%;
+}
+
+.second-section .card {
+  /* width: 40%; */
+  display: flex;
+  background-color: white;
+  padding: 2.5rem;
+  height: 100%;
+}
+
+.first-section .quotes {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.first-section .inner-text {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.first-section .name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.image {
+  width: 650px;
+  height: 250px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.third-card .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.second-section .quotes {
+  font-size: 8rem;
+  margin-bottom: 1.8rem;
+}
+
+.second-section .inner-text {
+  font-size: 1.6rem;
+  margin-bottom: 6rem;
+  line-height: 1.2;
+}
+
+.second-section .avatar {
+  display: flex;
+  border-top: .5px solid #c7c5c5;
+  padding: .5rem;
+  padding-top: 1.5rem;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.second-section .avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.avatar-text p {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.avatar-text span {
+  font-size: 1rem;
+  font-weight: bold;
+
+  color: rgb(90,89,89);
+}

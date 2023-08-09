@@ -1,0 +1,5 @@
+RESOLUTION: 1920x1080
+
+Please use Live Server! /at 1 task, height problem when index.html is opened STATIC!
+
+zooming in/out on Chrome with ctrl + scroll.

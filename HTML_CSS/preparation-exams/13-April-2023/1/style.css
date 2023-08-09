@@ -1,0 +1,145 @@
+@import url('https://use.fontawesome.com/releases/v6.4.0/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: Inter, sans-serif;
+  height: 100vh;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  background-image: url('author/image/background.jpg');
+  /* object-fit: contain; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-section {
+  display: flex;
+  justify-content: space-between;
+
+  height: 700px;
+  width: 1600px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 500px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  width: 400px;
+  height: 600px;
+}
+
+.price-container {
+  flex: 1;
+
+  font-size: 1.3rem;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+  width: 100%;
+  min-height: 168px;
+}
+
+.price-monthly {
+  display: flex;
+  align-items: center;
+  color: #817f7f;
+}
+
+.price-container h2 {
+  text-transform: uppercase;
+}
+
+.price-monthly .add-on {
+  padding-top: 1.9rem;
+}
+
+.price-monthly h1 {
+  font-size: 4.2rem;
+  padding-top: 0.2rem;
+  color: black;
+  padding: 0 0.5rem;
+}
+
+.price-info {
+  font-size: 0.9rem;
+  color: #817f7f;
+}
+
+.ticks {
+  flex: 1;
+  padding-top: 2rem;
+}
+
+.ticks ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.3rem;
+
+  list-style-type: none;
+}
+
+.card-btn {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 144px;
+}
+
+.card-btn a {
+  width: 40%;
+  height: 35%;
+  text-align: center;
+  font-size: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border-radius: 1rem;
+}
+
+.card-btn.last {
+  margin-top: -2.2rem;
+}
+
+.card.middle {
+  margin: -2rem 0;
+}
+
+.card.middle .card-btn {
+  margin-top: 2rem;
+}
